@@ -31,7 +31,6 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen> {
     final thisWeek = volume.last;
     final past = volume.take(volume.length - 1).toList();
     final avg = past.isEmpty ? 0.0 : past.reduce((a, b) => a + b) / past.length;
-    final vsAvg = avg == 0 ? 0.0 : (thisWeek - avg) / avg * 100;
     final avgCount = counts.isEmpty ? 0.0 : counts.reduce((a, b) => a + b) / counts.length;
     final firstWeek = stats.thisMonday.subtract(Duration(days: 7 * (weeks - 1)));
     final mid = stats.thisMonday.subtract(Duration(days: 7 * (weeks ~/ 2)));
@@ -56,18 +55,12 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Row(children: [
               Expanded(child: Text('Weekly volume', style: K.label.copyWith(color: K.text2))),
-              if (avg > 0)
-                StatusChip(
-                  label: '${vsAvg >= 0 ? '+' : ''}${vsAvg.round()}% vs average',
-                  icon: vsAvg >= 0 ? Icons.arrow_upward_rounded : Icons.arrow_downward_rounded,
-                  fg: vsAvg >= 0 ? K.success : K.warning,
-                  bg: vsAvg >= 0 ? K.successTint : K.warningTint,
-                ),
+              if (avg > 0) StatusChip(label: 'Avg ${fmtThousands(avg)} kg / wk', fg: K.text2, bg: K.surfaceAlt),
             ]),
             Row(crossAxisAlignment: CrossAxisAlignment.baseline, textBaseline: TextBaseline.alphabetic, children: [
               Text(fmtThousands(thisWeek), style: K.stat),
               const SizedBox(width: 6),
-              Text('kg this week', style: K.caption),
+              Text('kg this week so far', style: K.caption),
             ]),
             const SizedBox(height: 16),
             BarChart(

@@ -169,6 +169,7 @@ class ProgressBar extends StatelessWidget {
             Positioned.fill(child: ColoredBox(color: onInk ? Colors.white.withValues(alpha: .15) : K.surfaceAlt)),
             FractionallySizedBox(
               widthFactor: value.clamp(0, 1),
+              heightFactor: 1,
               child: ColoredBox(color: onInk ? K.neon : K.accentFill),
             ),
           ]),

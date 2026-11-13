@@ -45,7 +45,17 @@ class _WorkoutSummaryScreenState extends ConsumerState<WorkoutSummaryScreen> {
     final stats = ref.watch(statsProvider);
     final previous = stats.lastOf(s.name);
     final records = Stats([...stats.history, s]).newRecordsIn(s);
-    final change = previous == null || previous.volume == 0 ? null : (s.volume - previous.volume) / previous.volume * 100;
+    // Average load per rep on the weighted exercises logged today vs the same exercises last time,
+    // so a partly logged session still compares like with like.
+    double? load(WorkoutSession? w) {
+      if (w == null) return null;
+      final ids = s.exercises.map((e) => e.exerciseId).toSet();
+      final logs = w.exercises.where((e) => ids.contains(e.exerciseId) && e.volume > 0);
+      final reps = logs.fold(0, (a, e) => a + e.doneSets.where((x) => x.weightKg != null).fold(0, (b, x) => b + x.reps));
+      return reps == 0 ? null : logs.fold(0.0, (a, e) => a + e.volume) / reps;
+    }
+    final now = load(s), before = load(previous);
+    final change = now == null || before == null ? null : (now - before) / before * 100;
     final goals = ref.watch(goalsProvider).where((g) => g.exerciseId != null && s.exercises.any((e) => e.exerciseId == g.exerciseId));
 
     return Scaffold(
@@ -77,7 +87,7 @@ class _WorkoutSummaryScreenState extends ConsumerState<WorkoutSummaryScreen> {
                   const SizedBox(height: 6),
                   Center(
                     child: StatusChip(
-                      label: '${change >= 0 ? '+' : ''}${change.toStringAsFixed(1)}% vs last time',
+                      label: '${change >= 0 ? '+' : ''}${change.toStringAsFixed(1)}% load per rep vs last time',
                       icon: change >= 0 ? Icons.trending_up_rounded : Icons.trending_down_rounded,
                       fg: change >= 0 ? K.success : K.warning,
                       bg: change >= 0 ? K.successTint : K.warningTint,
