@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=393, height=852, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Active Workout - Kinetra</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts: Inter & Instrument Serif -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary": "#ffffff",
+            "warning-text": "#A75906",
+            "accent-tint": "#F8FFDB",
+            "tertiary": "#4f616e",
+            "on-tertiary-fixed-variant": "#374956",
+            "outline-variant": "#c4c9ac",
+            "text-tertiary": "#6A6F52",
+            "secondary": "#516600",
+            "border-hairline": "#E2E7D2",
+            "surface-variant": "#e2e4cf",
+            "on-surface": "#1a1d10",
+            "border-strong": "#92975F",
+            "accent-pressed": "#586E00",
+            "on-error": "#ffffff",
+            "on-primary-fixed-variant": "#3c4d00",
+            "on-tertiary-container": "#5b6d7a",
+            "accent-fill": "#647D00",
+            "ink": "#1C1F0C",
+            "surface-container-lowest": "#ffffff",
+            "primary": "#506600",
+            "success-bg": "#E3F4E9",
+            "surface-container": "#edf0da",
+            "surface-container-low": "#f3f5df",
+            "tertiary-fixed": "#d2e5f5",
+            "primary-fixed": "#c3f400",
+            "on-primary-container": "#5b7300",
+            "error": "#ba1a1a",
+            "surface-bright": "#f9fbe5",
+            "surface-container-highest": "#e2e4cf",
+            "surface-container-high": "#e7ead4",
+            "on-background": "#1a1d10",
+            "secondary-container": "#d0ef71",
+            "info-bg": "#ECEFE0",
+            "on-secondary-container": "#566c00",
+            "on-primary": "#ffffff",
+            "secondary-fixed-dim": "#b5d258",
+            "danger-bg": "#FBE5E5",
+            "inverse-surface": "#2f3223",
+            "warning-bg": "#FAEFE1",
+            "inverse-primary": "#abd600",
+            "surface-tint": "#506600",
+            "surface-dim": "#d9dcc6",
+            "on-surface-variant": "#444933",
+            "error-container": "#ffdad6",
+            "support-pink": "#FF9BD2",
+            "surface-alt": "#F1F5E4",
+            "tertiary-fixed-dim": "#b6c9d8",
+            "tertiary-container": "#dcefff",
+            "on-tertiary-fixed": "#0b1d29",
+            "primary-fixed-dim": "#abd600",
+            "support-strong": "#FF4BB2",
+            "info-text": "#5C7300",
+            "danger-text": "#CE2020",
+            "primary-container": "#ccff00",
+            "background": "#FAFCF4",
+            "text-secondary": "#4B5034",
+            "on-secondary-fixed": "#161e00",
+            "accent-neon": "#CCFF00",
+            "inverse-on-surface": "#f0f3dd",
+            "surface": "#FFFFFF",
+            "on-tertiary": "#ffffff",
+            "secondary-fixed": "#d0ef71",
+            "success-text": "#0E7C3A",
+            "on-secondary-fixed-variant": "#3c4d00",
+            "on-error-container": "#93000a",
+            "outline": "#747a60",
+            "on-primary-fixed": "#161e00"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "24px",
+            "gutter": "20px",
+            "margin": "20px",
+            "space-2xl": "32px",
+            "space-lg": "16px",
+            "space-xs": "4px",
+            "space-sm": "8px",
+            "space-md": "12px"
+          },
+          "fontFamily": {
+            "body": ["Inter"],
+            "stat-display": ["Inter"],
+            "display": ["Instrument Serif"],
+            "title": ["Inter"],
+            "caption": ["Inter"],
+            "label": ["Inter"]
+          },
+          "fontSize": {
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "stat-display": ["32px", { "lineHeight": "38px", "fontWeight": "700" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+    }
+    .custom-card-shadow {
+      box-shadow: 0 1px 2px rgba(28,31,12,0.04), 0 8px 24px rgba(28,31,12,0.06);
+    }
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex justify-center selection:bg-accent-neon selection:text-ink antialiased">
+<!-- Mobile Device Shell Frame (393px width standard) -->
+<div class="w-full max-w-[393px] min-h-screen bg-background relative flex flex-col pb-36 overflow-x-hidden">
+<!-- Top Safe Area Padding (iOS standard status clearance) -->
+<div class="h-12 w-full flex-shrink-0"></div>
+<!-- SHARED COMPONENT: TopAppBar (Modal Workout Session Variant) -->
+<header class="docked full-width top-0 border-b border-border-hairline dark:border-outline-variant flat no shadows bg-background dark:bg-background flex justify-between items-center w-full px-margin h-14 z-30 flex-shrink-0">
+<!-- Leading Icon / Cancel/Close Action -->
+<button aria-label="Close workout session" class="w-10 h-10 -ml-2 rounded-full flex items-center justify-center text-ink hover:bg-surface-container active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-ink text-[22px]">close</span>
+</button>
+<!-- Center Headline and Live Elapsed Timer -->
+<div class="flex flex-col items-center">
+<h1 class="text-title font-title text-ink font-semibold tracking-tight leading-none text-base">Upper Body Power</h1>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-fill animate-pulse"></span>
+<span class="text-caption font-caption text-text-secondary tabular-nums text-xs">18:42</span>
+</div>
+</div>
+<!-- Trailing Action: Finish Workout -->
+<button class="text-label font-label text-ink hover:bg-surface-container active:scale-95 transition-transform duration-150 px-3 py-1.5 rounded-full bg-accent-tint border border-border-hairline font-semibold text-xs tracking-tight" type="button">
+        Finish
+      </button>
+</header>
+<!-- Sub-header & Session Progress Section -->
+<section class="px-margin pt-4 pb-2">
+<div class="flex items-center justify-between mb-2">
+<span class="text-caption font-caption text-text-secondary font-medium">Exercise 2 of 6</span>
+<span class="text-caption font-caption text-text-tertiary">33% complete</span>
+</div>
+<!-- Progress Bar (track #F1F5E4, fill #647D00) -->
+<div class="w-full h-1.5 bg-surface-alt rounded-full overflow-hidden">
+<div class="h-full bg-accent-fill rounded-full" style="width: 33.3%;"></div>
+</div>
+</section>
+<!-- Main Active Exercise Section (Focal Exercise Card) -->
+<main class="px-margin pt-3 flex flex-col gap-4">
+<div class="bg-surface rounded-[20px] border border-border-hairline custom-card-shadow p-4 flex flex-col gap-4">
+<!-- Header Info of Exercise & Tag -->
+<div class="flex items-start justify-between">
+<div>
+<div class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-accent-tint text-accent-fill text-[11px] font-medium tracking-wide mb-1.5">
+              Bodyweight • Back &amp; Biceps
+            </div>
+<h2 class="text-display font-display text-ink text-[28px] leading-tight">Pull-up</h2>
+</div>
+<button aria-label="Exercise options" class="w-8 h-8 rounded-full flex items-center justify-center text-text-tertiary hover:bg-surface-alt active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+<!-- Authentic Exercise Image Preview -->
+<div class="relative w-full h-40 rounded-xl overflow-hidden bg-surface-variant">
+<img alt="Athlete performing pull-ups" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrD3kWzxkIUMz46GMsGqdSBpzQgDfvYqTA1QADUUmKwG56tdFcizKNGGqOUe-quOeqiodJs-r85Ium43bCmdL0hT4A2GlnnEJ49yRywLpw1ROJXIjGh-dzm0DdZj_ymzE9JQO4esw9YPb7IPBNYM45JXu6b3zl2lCYP6citrJ3_BG3R-gounasu0r0LJwV1r8cjYJYIsb55S_S1Riqr8EgT9_6q-inKiKmSJlSGYT85esNxWPIQOB10w8pYl"/>
+<div class="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-2.5 left-3 flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-[16px] text-accent-neon">fitness_center</span>
+<span class="text-caption font-caption text-xs font-medium text-white/90">Strict Pronated Grip</span>
+</div>
+</div>
+<!-- Live Set Logging Table -->
+<div class="flex flex-col w-full">
+<!-- Column Headers -->
+<div class="grid grid-cols-12 text-[11px] font-semibold text-text-tertiary uppercase tracking-wider px-2 pb-2">
+<div class="col-span-2 text-center">Set</div>
+<div class="col-span-3">Previous</div>
+<div class="col-span-3 text-center">kg</div>
+<div class="col-span-2 text-center">Reps</div>
+<div class="col-span-2 text-right pr-2">Done</div>
+</div>
+<!-- Rows Container -->
+<div class="flex flex-col gap-1.5">
+<!-- Row 1: Completed -->
+<div class="grid grid-cols-12 items-center px-2 py-2.5 rounded-xl bg-accent-tint/60 border border-border-hairline transition-all">
+<div class="col-span-2 text-center font-bold text-ink text-sm">1</div>
+<div class="col-span-3 text-caption font-caption text-text-secondary text-xs">BW × 8</div>
+<div class="col-span-3 text-center font-medium text-ink text-sm">BW</div>
+<div class="col-span-2 text-center font-bold text-ink text-sm tabular-nums">8</div>
+<div class="col-span-2 flex justify-end pr-1">
+<button aria-label="Marked complete" class="w-7 h-7 rounded-full bg-accent-fill text-white flex items-center justify-center shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</button>
+</div>
+</div>
+<!-- Row 2: Completed -->
+<div class="grid grid-cols-12 items-center px-2 py-2.5 rounded-xl bg-accent-tint/60 border border-border-hairline transition-all">
+<div class="col-span-2 text-center font-bold text-ink text-sm">2</div>
+<div class="col-span-3 text-caption font-caption text-text-secondary text-xs">BW × 8</div>
+<div class="col-span-3 text-center font-medium text-ink text-sm">BW</div>
+<div class="col-span-2 text-center font-bold text-ink text-sm tabular-nums">8</div>
+<div class="col-span-2 flex justify-end pr-1">
+<button aria-label="Marked complete" class="w-7 h-7 rounded-full bg-accent-fill text-white flex items-center justify-center shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</button>
+</div>
+</div>
+<!-- Row 3: Active Current Set -->
+<div class="grid grid-cols-12 items-center px-2 py-2.5 rounded-xl bg-surface border-2 border-accent-fill shadow-sm relative transition-all">
+<div class="col-span-2 text-center font-bold text-ink text-sm flex items-center justify-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-fill"></span>
+<span>3</span>
+</div>
+<div class="col-span-3 text-caption font-caption text-text-tertiary text-xs">BW × 8</div>
+<!-- kg selector / static for bodyweight -->
+<div class="col-span-3 text-center font-semibold text-ink text-sm">
+<span class="px-2 py-1 bg-surface-alt rounded-lg">BW</span>
+</div>
+<!-- Interactive Reps Stepper -->
+<div class="col-span-2 flex items-center justify-center gap-1">
+<button aria-label="Decrease reps" class="w-5 h-5 rounded-md bg-surface-alt flex items-center justify-center text-ink text-xs font-bold active:scale-90 transition-transform" type="button">
+                  -
+                </button>
+<span class="font-bold text-ink text-sm tabular-nums min-w-[14px] text-center">7</span>
+<button aria-label="Increase reps" class="w-5 h-5 rounded-md bg-surface-alt flex items-center justify-center text-ink text-xs font-bold active:scale-90 transition-transform" type="button">
+                  +
+                </button>
+</div>
+<!-- Active Complete Toggle -->
+<div class="col-span-2 flex justify-end pr-1">
+<button aria-label="Complete current set" class="w-7 h-7 rounded-full border-2 border-accent-fill bg-surface-bright flex items-center justify-center text-accent-fill hover:bg-accent-neon hover:text-ink active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+</div>
+</div>
+<!-- Row 4: Pending / Empty -->
+<div class="grid grid-cols-12 items-center px-2 py-2.5 rounded-xl bg-background border border-border-hairline text-text-tertiary">
+<div class="col-span-2 text-center font-medium text-text-tertiary text-sm">4</div>
+<div class="col-span-3 text-caption font-caption text-text-tertiary/70 text-xs">BW × 8</div>
+<div class="col-span-3 text-center font-medium text-text-tertiary text-sm">-</div>
+<div class="col-span-2 text-center font-medium text-text-tertiary text-sm tabular-nums">-</div>
+<div class="col-span-2 flex justify-end pr-1">
+<div class="w-7 h-7 rounded-full border border-border-hairline bg-surface-alt/50 flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-border-hairline"></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Add Set Action Button -->
+<div class="pt-3 flex justify-between items-center">
+<button class="inline-flex items-center gap-1.5 text-accent-fill font-semibold text-xs tracking-tight py-1.5 px-3 rounded-lg hover:bg-accent-tint active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add set</span>
+</button>
+<button class="inline-flex items-center gap-1 text-text-tertiary hover:text-ink text-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>Notes</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Next Up Section Preview -->
+<div class="mt-1 flex flex-col gap-2">
+<span class="text-caption font-caption text-text-tertiary font-semibold uppercase tracking-wider text-[11px] px-1">Next up</span>
+<div class="bg-surface rounded-2xl border border-border-hairline p-3 flex items-center justify-between custom-card-shadow">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-xl overflow-hidden bg-surface-variant flex-shrink-0">
+<img alt="Barbell setup in gym rack for overhead press" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrClCCIgP-Ff0MWp77fvRmRYHox_x4_RwAqOe2n8-P2S4epe3R3h_Zzh2RtHzmJ1jNQfuMo3RFmzSaPUnKuF5v4iLHz8q4b0QPNIGW6bwEQA25SkvIKKQsqF4T5Dg9KQsoEGR6d41WgE4hsMPS-DBIaHoBojo_KIFh-sAVZDtFdHDR1xiUfI0d78QmZQQ19FjwmjUgVt4uuznXi2wq8kq9fyMKhBYhqn9ABNoWDTWPLaou89ILwysTihUwanWQ"/>
+</div>
+<div class="flex flex-col">
+<span class="font-title text-ink font-semibold text-sm">Overhead Press</span>
+<span class="text-caption font-caption text-text-secondary text-xs mt-0.5">3 × 8 • 40 kg</span>
+</div>
+</div>
+<button aria-label="Skip to Overhead Press" class="w-8 h-8 rounded-full bg-surface-alt flex items-center justify-center text-ink hover:bg-surface-variant active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">skip_next</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Floating Rest Timer Pill (Docked above iOS safe bottom zone) -->
+<div class="fixed bottom-6 left-0 right-0 max-w-[393px] mx-auto px-margin z-40 pointer-events-none">
+<div class="pointer-events-auto bg-ink text-white rounded-full py-2.5 px-4 shadow-xl border border-white/10 flex items-center justify-between">
+<!-- Timer Left Info -->
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-accent-neon">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="text-caption font-caption text-white/60 text-xs font-medium">Rest</span>
+<span class="font-title font-bold text-white text-base tracking-tight tabular-nums">01:15</span>
+</div>
+</div>
+<!-- Timer Quick Actions -->
+<div class="flex items-center gap-2">
+<!-- +15s Chip -->
+<button class="px-2.5 py-1 rounded-full border border-accent-neon/60 bg-accent-neon/10 text-accent-neon text-xs font-semibold hover:bg-accent-neon hover:text-ink active:scale-95 transition-all" type="button">
+            +15s
+          </button>
+<!-- Skip Button -->
+<button class="px-3 py-1 rounded-full text-white/70 hover:text-white text-xs font-medium active:scale-95 transition-colors" type="button">
+            Skip
+          </button>
+</div>
+</div>
+</div>
+<!-- Safe Bottom Area Spacer -->
+<div class="h-8 w-full flex-shrink-0"></div>
+</div>
+</body></html>

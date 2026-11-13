@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kinetra - Profile</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-tint": "#506600",
+            "border-hairline": "#E2E7D2",
+            "primary-fixed": "#c3f400",
+            "surface": "#FFFFFF",
+            "support-strong": "#FF4BB2",
+            "success-text": "#0E7C3A",
+            "surface-container": "#edf0da",
+            "danger-bg": "#FBE5E5",
+            "on-tertiary-fixed-variant": "#374956",
+            "inverse-surface": "#2f3223",
+            "accent-pressed": "#586E00",
+            "tertiary-fixed-dim": "#b6c9d8",
+            "primary": "#506600",
+            "surface-container-highest": "#e2e4cf",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed-variant": "#3c4d00",
+            "secondary-fixed": "#d0ef71",
+            "secondary": "#516600",
+            "primary-fixed-dim": "#abd600",
+            "ink": "#1C1F0C",
+            "info-bg": "#ECEFE0",
+            "border-strong": "#92975F",
+            "success-bg": "#E3F4E9",
+            "on-error-container": "#93000a",
+            "on-primary": "#ffffff",
+            "tertiary": "#4f616e",
+            "tertiary-fixed": "#d2e5f5",
+            "text-secondary": "#4B5034",
+            "on-secondary-container": "#566c00",
+            "on-secondary-fixed": "#161e00",
+            "on-primary-fixed": "#161e00",
+            "on-surface-variant": "#444933",
+            "on-error": "#ffffff",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed": "#0b1d29",
+            "inverse-on-surface": "#f0f3dd",
+            "surface-bright": "#f9fbe5",
+            "on-surface": "#1a1d10",
+            "primary-container": "#ccff00",
+            "on-tertiary-container": "#5b6d7a",
+            "surface-container-lowest": "#ffffff",
+            "text-tertiary": "#6A6F52",
+            "outline": "#747a60",
+            "warning-bg": "#FAEFE1",
+            "surface-container-high": "#e7ead4",
+            "surface-variant": "#e2e4cf",
+            "secondary-container": "#d0ef71",
+            "on-secondary-fixed-variant": "#3c4d00",
+            "accent-fill": "#647D00",
+            "error": "#ba1a1a",
+            "inverse-primary": "#abd600",
+            "tertiary-container": "#dcefff",
+            "info-text": "#5C7300",
+            "secondary-fixed-dim": "#b5d258",
+            "background": "#FAFCF4",
+            "danger-text": "#CE2020",
+            "accent-neon": "#CCFF00",
+            "support-pink": "#FF9BD2",
+            "outline-variant": "#c4c9ac",
+            "surface-dim": "#d9dcc6",
+            "warning-text": "#A75906",
+            "surface-container-low": "#f3f5df",
+            "accent-tint": "#F8FFDB",
+            "surface-alt": "#F1F5E4",
+            "on-primary-container": "#5b7300",
+            "on-background": "#1a1d10",
+            "error-container": "#ffdad6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1.25rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "16px",
+            "gutter": "20px",
+            "space-sm": "8px",
+            "space-2xl": "32px",
+            "space-xl": "24px",
+            "margin": "20px",
+            "space-xs": "4px",
+            "space-md": "12px"
+          },
+          "fontFamily": {
+            "title": ["Inter", "sans-serif"],
+            "caption": ["Inter", "sans-serif"],
+            "display": ["Instrument Serif", "serif"],
+            "label": ["Inter", "sans-serif"],
+            "stat-display": ["Inter", "sans-serif"],
+            "body": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "stat-display": ["32px", { "lineHeight": "38px", "fontWeight": "700" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 24px;
+      line-height: 1;
+      display: inline-block;
+    }
+    body {
+      background-color: #FAFCF4;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .custom-shadow {
+      box-shadow: 0 1px 2px rgba(28, 31, 12, 0.04), 0 8px 24px rgba(28, 31, 12, 0.06);
+    }
+  </style>
+</head>
+<body class="bg-background text-ink flex justify-center items-start min-h-screen">
+<!-- Mobile Viewport Frame (iPhone Standard 393 x 852) -->
+<main class="w-[393px] h-[852px] bg-background relative flex flex-col overflow-hidden shadow-2xl">
+<!-- Top Status Bar Clearance -->
+<div class="h-[59px] w-full shrink-0 flex items-end justify-between px-7 pb-1 text-ink select-none">
+<span class="font-caption text-caption text-ink font-semibold">9:41</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] leading-none">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[16px] leading-none">wifi</span>
+<span class="material-symbols-outlined text-[18px] leading-none">battery_full</span>
+</div>
+</div>
+<!-- Top Navigation / App Bar -->
+<header class="flex justify-between items-center w-full px-5 pt-2 pb-3 max-w-[393px] mx-auto shrink-0">
+<h1 class="font-display text-display text-ink tracking-tight">Profile</h1>
+<button aria-label="Settings" class="w-10 h-10 rounded-full flex items-center justify-center text-ink hover:text-primary active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-ink">settings</span>
+</button>
+</header>
+<!-- Scrollable Content Canvas -->
+<div class="flex-1 overflow-y-auto px-5 pb-28 pt-2 scrollbar-none">
+<!-- Profile Header / Avatar Section -->
+<section class="flex items-center gap-4 mb-6">
+<div class="relative w-[84px] h-[84px] rounded-full p-[3px] bg-border-hairline shrink-0">
+<img alt="Alex Morgan" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/ALJJyrA7TnAv3uPRkItH0N6ukMX8RyHVY9MqLJYlfWxIoFlnnheUgg-gsDTfFdzR44Ixayuiui_9fkBJun32MgvwHt4fYlnh3mUhQ8HRuLItpud4JJSCai0BEVAw9v5pkI_OedYCt6wmyuYIDpC8WDYwm1CYvL3GTjh3ykrKDPweEkND99pcN3RzaQ0EOFKwG6aVNhSzvrg7-Wv_SjCR7YmsmFop3fNtzN_dYDIJiSD1-BvpWA9B8qWgg7QPh1JItA"/>
+</div>
+<div class="flex flex-col">
+<h2 class="font-title text-title text-ink font-semibold">Alex Morgan</h2>
+<p class="font-caption text-caption text-text-tertiary mt-0.5">Member since Mar 2025</p>
+</div>
+</section>
+<!-- FOCAL STAT CARD (High-impact Restraint Hero Card) -->
+<section class="bg-ink rounded-[20px] p-5 text-surface custom-shadow mb-6">
+<div class="grid grid-cols-3 divide-x divide-white/10 text-center">
+<!-- Stat 1: Workouts -->
+<div class="flex flex-col items-center px-1">
+<span class="font-stat-display text-stat-display text-accent-neon font-bold tracking-tight">148</span>
+<span class="font-caption text-caption text-surface/85 mt-1">Workouts</span>
+</div>
+<!-- Stat 2: PRs -->
+<div class="flex flex-col items-center px-1">
+<span class="font-stat-display text-stat-display text-accent-neon font-bold tracking-tight">23</span>
+<span class="font-caption text-caption text-surface/85 mt-1">PRs</span>
+</div>
+<!-- Stat 3: Streak -->
+<div class="flex flex-col items-center px-1">
+<span class="font-stat-display text-stat-display text-accent-neon font-bold tracking-tight">12</span>
+<span class="font-caption text-caption text-surface/85 mt-1">Streak</span>
+</div>
+</div>
+</section>
+<!-- Settings List Group Card -->
+<section class="bg-surface rounded-[20px] custom-shadow overflow-hidden mb-6">
+<!-- Item 1: Units -->
+<button class="w-full flex items-center justify-between px-4 py-3.5 hover:bg-surface-alt transition-colors active:scale-[0.99] text-left">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-accent-tint flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-accent-fill text-[20px]">straighten</span>
+</div>
+<span class="font-body text-[16px] text-ink font-medium">Units</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-caption text-caption text-text-tertiary">kg and km</span>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</div>
+</button>
+<div class="h-[1px] bg-border-hairline mx-4"></div>
+<!-- Item 2: Workout reminders -->
+<button class="w-full flex items-center justify-between px-4 py-3.5 hover:bg-surface-alt transition-colors active:scale-[0.99] text-left">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-accent-tint flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-accent-fill text-[20px]">alarm</span>
+</div>
+<span class="font-body text-[16px] text-ink font-medium">Workout reminders</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-caption text-caption text-text-tertiary">Mon Wed Fri 7:00 AM</span>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</div>
+</button>
+<div class="h-[1px] bg-border-hairline mx-4"></div>
+<!-- Item 3: Weekly report -->
+<button class="w-full flex items-center justify-between px-4 py-3.5 hover:bg-surface-alt transition-colors active:scale-[0.99] text-left">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-accent-tint flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-accent-fill text-[20px]">calendar_today</span>
+</div>
+<span class="font-body text-[16px] text-ink font-medium">Weekly report</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-caption text-caption text-text-tertiary">Sunday evening</span>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</div>
+</button>
+<div class="h-[1px] bg-border-hairline mx-4"></div>
+<!-- Item 4: Connected devices -->
+<button class="w-full flex items-center justify-between px-4 py-3.5 hover:bg-surface-alt transition-colors active:scale-[0.99] text-left">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-accent-tint flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-accent-fill text-[20px]">watch</span>
+</div>
+<span class="font-body text-[16px] text-ink font-medium">Connected devices</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-caption text-caption text-text-tertiary">Heart rate strap</span>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</div>
+</button>
+<div class="h-[1px] bg-border-hairline mx-4"></div>
+<!-- Item 5: Export data -->
+<button class="w-full flex items-center justify-between px-4 py-3.5 hover:bg-surface-alt transition-colors active:scale-[0.99] text-left">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-accent-tint flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-accent-fill text-[20px]">download</span>
+</div>
+<span class="font-body text-[16px] text-ink font-medium">Export data</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-caption text-caption text-text-tertiary">CSV</span>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</div>
+</button>
+<div class="h-[1px] bg-border-hairline mx-4"></div>
+<!-- Item 6: Help and feedback -->
+<button class="w-full flex items-center justify-between px-4 py-3.5 hover:bg-surface-alt transition-colors active:scale-[0.99] text-left">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-accent-tint flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-accent-fill text-[20px]">help_outline</span>
+</div>
+<span class="font-body text-[16px] text-ink font-medium">Help and feedback</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</div>
+</button>
+</section>
+<!-- Sign out Action -->
+<div class="flex justify-center pb-6">
+<button class="font-caption text-caption text-text-secondary hover:text-ink font-medium py-2 px-6 rounded-full hover:bg-surface-container active:scale-95 transition-all">
+          Sign out
+        </button>
+</div>
+</div>
+<!-- Bottom Navigation Bar (Mandatory Shared Component: Profile Active) -->
+<nav class="fixed bottom-0 left-0 right-0 w-full z-50 flex justify-around items-center px-2 pt-2 pb-8 max-w-[393px] mx-auto bg-surface border-t border-border-hairline">
+<!-- Tab 1: Today -->
+<button class="flex flex-col items-center justify-center text-text-secondary hover:text-ink transition-colors active:scale-95 flex-1 py-1">
+<span class="material-symbols-outlined text-[24px]">today</span>
+<span class="font-caption text-[11px] leading-tight mt-1">Today</span>
+</button>
+<!-- Tab 2: Workouts -->
+<button class="flex flex-col items-center justify-center text-text-secondary hover:text-ink transition-colors active:scale-95 flex-1 py-1">
+<span class="material-symbols-outlined text-[24px]">fitness_center</span>
+<span class="font-caption text-[11px] leading-tight mt-1">Workouts</span>
+</button>
+<!-- Tab 3: Goals -->
+<button class="flex flex-col items-center justify-center text-text-secondary hover:text-ink transition-colors active:scale-95 flex-1 py-1">
+<span class="material-symbols-outlined text-[24px]">flag</span>
+<span class="font-caption text-[11px] leading-tight mt-1">Goals</span>
+</button>
+<!-- Tab 4: Progress -->
+<button class="flex flex-col items-center justify-center text-text-secondary hover:text-ink transition-colors active:scale-95 flex-1 py-1">
+<span class="material-symbols-outlined text-[24px]">insights</span>
+<span class="font-caption text-[11px] leading-tight mt-1">Progress</span>
+</button>
+<!-- Tab 5: Profile (Active) -->
+<button class="flex flex-col items-center justify-center text-ink font-caption text-caption [&amp;&gt;span:first-child]:bg-accent-neon [&amp;&gt;span:first-child]:text-ink [&amp;&gt;span:first-child]:rounded-full [&amp;&gt;span:first-child]:px-3 [&amp;&gt;span:first-child]:py-0.5 active:scale-95 flex-1 py-1 transition-transform">
+<span class="material-symbols-outlined text-[22px]">person</span>
+<span class="font-caption text-[11px] leading-tight mt-1 font-semibold text-ink">Profile</span>
+</button>
+</nav>
+<!-- iOS Home Indicator Clearance Free Zone -->
+<div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-32 h-1 bg-ink/30 rounded-full pointer-events-none z-50"></div>
+</main>
+</body></html>

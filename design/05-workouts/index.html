@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kinetra - Workouts</title>
+<!-- Google Fonts: Inter and Instrument Serif -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "support-strong": "#FF4BB2",
+            "tertiary-fixed-dim": "#b6c9d8",
+            "tertiary": "#4f616e",
+            "on-background": "#1a1d10",
+            "primary-container": "#ccff00",
+            "warning-bg": "#FAEFE1",
+            "error": "#ba1a1a",
+            "border-hairline": "#E2E7D2",
+            "ink": "#1C1F0C",
+            "on-tertiary-fixed": "#0b1d29",
+            "info-bg": "#ECEFE0",
+            "on-tertiary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "inverse-surface": "#2f3223",
+            "accent-pressed": "#586E00",
+            "on-error": "#ffffff",
+            "on-surface": "#1a1d10",
+            "secondary-fixed": "#d0ef71",
+            "on-secondary-fixed": "#161e00",
+            "on-surface-variant": "#444933",
+            "danger-bg": "#FBE5E5",
+            "warning-text": "#A75906",
+            "on-primary-fixed-variant": "#3c4d00",
+            "tertiary-fixed": "#d2e5f5",
+            "secondary-container": "#d0ef71",
+            "secondary-fixed-dim": "#b5d258",
+            "text-tertiary": "#6A6F52",
+            "surface": "#FFFFFF",
+            "support-pink": "#FF9BD2",
+            "on-secondary-container": "#566c00",
+            "secondary": "#516600",
+            "on-error-container": "#93000a",
+            "text-secondary": "#4B5034",
+            "background": "#FAFCF4",
+            "primary": "#506600",
+            "on-primary-container": "#5b7300",
+            "on-secondary-fixed-variant": "#3c4d00",
+            "accent-fill": "#647D00",
+            "surface-container-highest": "#e2e4cf",
+            "surface-tint": "#506600",
+            "surface-container": "#edf0da",
+            "success-text": "#0E7C3A",
+            "tertiary-container": "#dcefff",
+            "surface-bright": "#f9fbe5",
+            "primary-fixed-dim": "#abd600",
+            "surface-variant": "#e2e4cf",
+            "inverse-on-surface": "#f0f3dd",
+            "surface-container-high": "#e7ead4",
+            "surface-container-low": "#f3f5df",
+            "border-strong": "#92975F",
+            "on-tertiary-fixed-variant": "#374956",
+            "inverse-primary": "#abd600",
+            "surface-alt": "#F1F5E4",
+            "outline-variant": "#c4c9ac",
+            "accent-tint": "#F8FFDB",
+            "surface-container-lowest": "#ffffff",
+            "info-text": "#5C7300",
+            "success-bg": "#E3F4E9",
+            "surface-dim": "#d9dcc6",
+            "on-primary-fixed": "#161e00",
+            "outline": "#747a60",
+            "primary-fixed": "#c3f400",
+            "on-tertiary-container": "#5b6d7a",
+            "on-primary": "#ffffff",
+            "error-container": "#ffdad6",
+            "danger-text": "#CE2020",
+            "accent-neon": "#CCFF00"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1.25rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "12px",
+            "space-xs": "4px",
+            "margin": "20px",
+            "space-2xl": "32px",
+            "space-xl": "24px",
+            "space-sm": "8px",
+            "gutter": "20px",
+            "space-lg": "16px"
+          },
+          "fontFamily": {
+            "label": ["Inter", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "display": ["Instrument Serif", "serif"],
+            "caption": ["Inter", "sans-serif"],
+            "stat-display": ["Inter", "sans-serif"],
+            "title": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "stat-display": ["32px", { "lineHeight": "38px", "fontWeight": "700" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+          },
+          "boxShadow": {
+            "card-soft": "0 1px 2px rgba(28,31,12,0.04), 0 8px 24px rgba(28,31,12,0.06)"
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex justify-center selection:bg-accent-neon selection:text-ink antialiased">
+<!-- Mobile Device Shell Frame (393px width standard) -->
+<div class="w-full max-w-[393px] min-h-screen bg-background relative flex flex-col pb-[90px]">
+<!-- Status Bar Spacer (59px clearance) -->
+<div class="h-[59px] w-full shrink-0 flex items-end justify-between px-6 pb-1 text-ink font-label text-caption select-none">
+<span class="font-semibold text-ink">9:41</span>
+<div class="flex items-center gap-1.5 text-ink">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[16px]">wifi</span>
+<span class="material-symbols-outlined text-[20px]">battery_full</span>
+</div>
+</div>
+<!-- Top App Bar & Header -->
+<header class="flex justify-between items-center w-full px-5 py-3 shrink-0">
+<div class="flex items-center gap-2">
+<h1 class="font-display text-display text-ink tracking-tight">Workouts</h1>
+</div>
+<button aria-label="Add workout" class="w-10 h-10 rounded-full bg-ink text-surface flex items-center justify-center hover:opacity-90 active:scale-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 px-5 flex flex-col gap-5 overflow-y-auto no-scrollbar pt-1">
+<!-- Search Input -->
+<section class="w-full">
+<div class="relative w-full h-[52px]">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-text-tertiary">
+<span class="material-symbols-outlined text-[22px]">search</span>
+</div>
+<input class="w-full h-full pl-11 pr-4 bg-surface rounded-xl border border-border-strong text-ink placeholder:text-text-tertiary font-body text-label focus:outline-none focus:ring-2 focus:ring-accent-fill transition-all" placeholder="Search workouts or exercises" type="text"/>
+</div>
+</section>
+<!-- Category Filter Chips -->
+<section class="w-full overflow-x-auto no-scrollbar -mx-5 px-5">
+<div class="flex items-center gap-2 w-max">
+<!-- Active Chip -->
+<button class="h-8 px-4 rounded-full bg-ink text-accent-neon font-caption text-caption flex items-center justify-center transition-transform active:scale-95">
+            All
+          </button>
+<!-- Inactive Chips -->
+<button class="h-8 px-4 rounded-full bg-accent-tint text-accent-fill font-caption text-caption flex items-center justify-center hover:bg-opacity-80 transition-transform active:scale-95">
+            Strength
+          </button>
+<button class="h-8 px-4 rounded-full bg-accent-tint text-accent-fill font-caption text-caption flex items-center justify-center hover:bg-opacity-80 transition-transform active:scale-95">
+            Cardio
+          </button>
+<button class="h-8 px-4 rounded-full bg-accent-tint text-accent-fill font-caption text-caption flex items-center justify-center hover:bg-opacity-80 transition-transform active:scale-95">
+            Mobility
+          </button>
+<button class="h-8 px-4 rounded-full bg-accent-tint text-accent-fill font-caption text-caption flex items-center justify-center hover:bg-opacity-80 transition-transform active:scale-95">
+            HIIT
+          </button>
+</div>
+</section>
+<!-- Focal Featured Plan Card -->
+<section class="w-full">
+<div class="relative w-full h-56 rounded-2xl overflow-hidden shadow-card-soft group cursor-pointer border border-border-hairline transition-transform active:scale-[0.99]">
+<!-- Background Image -->
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Athletic man executing a wide-grip pull-up in a modern industrial brick-walled gym with sunlight streaming through large factory windows. The scene captures sharp muscle definition, dynamic strength training, and an inspiring athletic mood in crisp high-contrast natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAffsLAwVAcWDowvQ9RReX320kzB4wHh8wlZ6TK3wh1lZJO7VUaT1h2GpysQxhiZDUZ5fjFe7RdE7o6cTY3RXnLXJvEFyl_rMT-23040KAyP45RljkZjRDkTw9ltt5xrsoBM6Uc_-ObrGhN7HuCeZcalF8WAn9mq5-yI_ayV6xneJL1sA0mqPZgtCtgXixDHZy5I7BdBNxUucu9hpQa66R6acAPF17HYc8tsF-tL_UyPSZ0ZxHxA7QA8VQLsdrJj4aekyIagJ8xW0e5KA"/>
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/65 to-transparent"></div>
+<!-- Card Content -->
+<div class="absolute inset-0 p-5 flex flex-col justify-between">
+<!-- Badge -->
+<div class="flex justify-between items-start">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-ink/70 backdrop-blur-md border border-white/10 text-accent-neon font-caption text-[11px] font-semibold tracking-wider">
+                CURRENT PLAN
+              </span>
+<span class="material-symbols-outlined text-surface/80 text-[20px]">bookmark</span>
+</div>
+<!-- Title & Progress Bar Info -->
+<div class="space-y-3">
+<div>
+<h3 class="font-title text-[22px] font-bold text-surface tracking-tight leading-tight">4-Week Strength Builder</h3>
+<p class="font-caption text-caption text-surface/80 mt-0.5">Week 2 of 4</p>
+</div>
+<!-- Progress bar -->
+<div class="space-y-1.5">
+<div class="flex justify-between text-caption font-caption text-surface/90 text-[12px] font-medium">
+<span>Overall progress</span>
+<span class="font-bold text-accent-neon tabular-nums">45%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface/20 backdrop-blur-sm overflow-hidden p-0.5">
+<div class="h-full bg-accent-neon rounded-full" style="width: 45%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: My routines -->
+<section class="w-full space-y-3 pt-1">
+<div class="flex justify-between items-baseline px-0.5">
+<h2 class="font-title text-title text-ink font-semibold">My routines</h2>
+<span class="font-caption text-caption text-text-secondary hover:text-ink cursor-pointer font-medium">4 active</span>
+</div>
+<!-- Routines List Card Container -->
+<div class="bg-surface rounded-2xl shadow-card-soft border border-border-hairline divide-y divide-border-hairline overflow-hidden">
+<!-- Routine Item 1 -->
+<div class="flex items-center gap-3.5 p-3.5 hover:bg-surface-alt/50 active:bg-surface-alt transition-colors cursor-pointer group">
+<div class="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-ink">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Heavy barbell loaded with weight plates resting on gym floor matting ready for bench press and deadlift session in authentic athletic facility, featuring raw metallic texture and focused strength workout aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2cXPHfDXaXtW0XQHhABXR_vqQdj4PQnv-IsyIBOmmOIP-Ys7LrGYsZuOjl3uQc0i3PlxMUnPvq2Q1QTg1fLpsUZrUvJ38EUc3be0PVgeYODUDG9HKRaYf_9dFtRnaPAQLKQYMiA5LzjgHOSpAF4HtD_0P0gtW-WPC1EevZBr9-KpxhwvGSUxT5Jenr_8o42il91iX-dYy3vwV66agO54h8GePrWG20X2X5Qq659aew39c76hQX8iu6HO0kdVDeiiQ-SNlXEwnD99-3A"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-title text-[15px] font-semibold text-ink truncate leading-snug">Upper Body Power</h4>
+<p class="font-caption text-caption text-text-secondary mt-0.5">6 exercises, 45 min</p>
+</div>
+<span class="material-symbols-outlined text-border-strong text-[20px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+<!-- Routine Item 2 -->
+<div class="flex items-center gap-3.5 p-3.5 hover:bg-surface-alt/50 active:bg-surface-alt transition-colors cursor-pointer group">
+<div class="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-ink">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Close-up of barbell racked on heavy-duty squat cage in fitness gym, surrounded by chalk dust and training weights in an authentic industrial setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8nphc5dWPCfxKfdZeX4mDzDdB4U5_rR7XfUfNWCjWrDyY-qSPKzg8JgP9du8VzfzSdqFrUY6OA8mUizEJtdfDOR0M2ssGwvITfof8PiT-Xg9qKOE_U2_KAgEeaWpx8bsyuOcmt5lp5X51xMNlC8FIOOsp4KN9XxhG3z8VKxxb-0hTC5kR6Nc_F4rFh4r7D-jEDua_EfOpcunOq1DLNCYohEnk-8Gtp87mAVxAY96VLxOCk2XCUt_tv55k-yXIGo16w2ZU_iQC3Rpn0A"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-title text-[15px] font-semibold text-ink truncate leading-snug">Leg Day</h4>
+<p class="font-caption text-caption text-text-secondary mt-0.5">7 exercises, 50 min</p>
+</div>
+<span class="material-symbols-outlined text-border-strong text-[20px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+<!-- Routine Item 3 -->
+<div class="flex items-center gap-3.5 p-3.5 hover:bg-surface-alt/50 active:bg-surface-alt transition-colors cursor-pointer group">
+<div class="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-ink">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Dedicated female athlete holding a steady high plank position on a black workout mat on gym floor, demonstrating abdominal core stability and strength in a bright sunlit fitness center." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgAgvpOho7EL7ASXY1FaV76hausoP51Vp521-nMcGOMkSotla5-mGZWcSVLuFIjA0Pzfqpv8jjTQA38fxBgFDKUV_FfnxnVYqhuDaTiZ78lzgbvt_KWzAaRfsrsxOae65LUVDKbC4l-NO4F6Y5asG1G5iaT-WScbpkS260SwDTiE-SsYBIEIUezXqqDXEhpVgCnOvrBoNV2DWotxxhOlHTS2eY3Ayikzu7JhkvGZ55Grb9wULcyIjeUT57UHD8S0Z926YrL1BBdtrVAw"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-title text-[15px] font-semibold text-ink truncate leading-snug">Core Blast</h4>
+<p class="font-caption text-caption text-text-secondary mt-0.5">5 exercises, 20 min</p>
+</div>
+<span class="material-symbols-outlined text-border-strong text-[20px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+<!-- Routine Item 4 -->
+<div class="flex items-center gap-3.5 p-3.5 hover:bg-surface-alt/50 active:bg-surface-alt transition-colors cursor-pointer group">
+<div class="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-ink">
+<img alt="Runner on pathway" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/ALJJyrDHvL-O6vMn1pFttCaay6_Nj1R2RKpTrNLEt4CkLltpvOv8HMX6FUY6NthYAgM0CxW6PuLCZ3pO_wdDJ0mboSQSvb9Z_gap49ypYksq5vf1yU86Q0joiUlulHg0p0yFHP0SGlUPxw9ipAwNWYhEM4LNWs4hDNAXJq5CmgElAlChqwXarxxTzW_dITJ40eUe0tAmG-_qUnDOnTc641cDcZOWLDTbI4AdMmJxoypUfmkly0fzy0pSiTyHxqy7cg"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-title text-[15px] font-semibold text-ink truncate leading-snug">Easy 5K Run</h4>
+<p class="font-caption text-caption text-text-secondary mt-0.5">Cardio, 30 min</p>
+</div>
+<span class="material-symbols-outlined text-border-strong text-[20px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Quick Start Floating Action / Motivation Card -->
+<section class="w-full py-1">
+<div class="p-4 rounded-2xl bg-surface-alt border border-border-hairline flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-accent-neon flex items-center justify-center text-ink">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+<div>
+<p class="font-title text-[14px] font-semibold text-ink">Quick Freestyle</p>
+<p class="font-caption text-[12px] text-text-secondary">Log an untracked session</p>
+</div>
+</div>
+<button class="h-9 px-4 rounded-full bg-ink text-surface font-caption text-[13px] font-medium active:scale-95 transition-transform">
+            Start
+          </button>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Fixed bottom shell, exactly 5 items, 'Workouts' active) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-3 pt-2 pb-8 bg-surface dark:bg-ink border-t border-border-hairline">
+<!-- Tab 1: Today -->
+<button class="flex flex-col items-center justify-center gap-1 text-text-secondary dark:text-outline-variant font-medium py-1 hover:text-ink dark:hover:text-surface transition-colors active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[22px]" data-icon="calendar_today">calendar_today</span>
+<span class="font-caption text-[11px] leading-tight">Today</span>
+</button>
+<!-- Tab 2: Workouts (ACTIVE STATE) -->
+<button class="flex flex-col items-center justify-center gap-1 text-ink dark:text-accent-neon font-semibold [&amp;&gt;span.material-symbols-outlined]:bg-accent-neon dark:[&amp;&gt;span.material-symbols-outlined]:bg-primary-container [&amp;&gt;span.material-symbols-outlined]:text-ink [&amp;&gt;span.material-symbols-outlined]:rounded-full [&amp;&gt;span.material-symbols-outlined]:px-4 [&amp;&gt;span.material-symbols-outlined]:py-1 active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="exercise">exercise</span>
+<span class="font-caption text-[11px] leading-tight">Workouts</span>
+</button>
+<!-- Tab 3: Goals -->
+<button class="flex flex-col items-center justify-center gap-1 text-text-secondary dark:text-outline-variant font-medium py-1 hover:text-ink dark:hover:text-surface transition-colors active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[22px]" data-icon="flag">flag</span>
+<span class="font-caption text-[11px] leading-tight">Goals</span>
+</button>
+<!-- Tab 4: Progress -->
+<button class="flex flex-col items-center justify-center gap-1 text-text-secondary dark:text-outline-variant font-medium py-1 hover:text-ink dark:hover:text-surface transition-colors active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[22px]" data-icon="trending_up">trending_up</span>
+<span class="font-caption text-[11px] leading-tight">Progress</span>
+</button>
+<!-- Tab 5: Profile -->
+<button class="flex flex-col items-center justify-center gap-1 text-text-secondary dark:text-outline-variant font-medium py-1 hover:text-ink dark:hover:text-surface transition-colors active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[22px]" data-icon="person">person</span>
+<span class="font-caption text-[11px] leading-tight">Profile</span>
+</button>
+</nav>
+<!-- Safe Area Home Indicator -->
+<div class="fixed bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-ink/20 rounded-full z-50 pointer-events-none"></div>
+</div>
+</body></html>

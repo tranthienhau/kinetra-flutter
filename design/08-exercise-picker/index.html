@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add Exercise - Kinetra</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-fixed-variant": "#3c4d00",
+            "inverse-surface": "#2f3223",
+            "on-secondary-container": "#566c00",
+            "surface-container-low": "#f3f5df",
+            "secondary-fixed": "#d0ef71",
+            "success-bg": "#E3F4E9",
+            "text-tertiary": "#6A6F52",
+            "on-background": "#1a1d10",
+            "surface-variant": "#e2e4cf",
+            "surface-container-high": "#e7ead4",
+            "accent-pressed": "#586E00",
+            "on-tertiary-container": "#5b6d7a",
+            "on-primary-fixed-variant": "#3c4d00",
+            "on-tertiary-fixed-variant": "#374956",
+            "secondary-container": "#d0ef71",
+            "error-container": "#ffdad6",
+            "outline": "#747a60",
+            "on-tertiary": "#ffffff",
+            "on-primary-container": "#5b7300",
+            "tertiary-fixed": "#d2e5f5",
+            "on-error-container": "#93000a",
+            "primary-fixed": "#c3f400",
+            "text-secondary": "#4B5034",
+            "tertiary-container": "#dcefff",
+            "surface-bright": "#f9fbe5",
+            "on-secondary": "#ffffff",
+            "accent-fill": "#647D00",
+            "support-pink": "#FF9BD2",
+            "surface-container-lowest": "#ffffff",
+            "on-primary": "#ffffff",
+            "ink": "#1C1F0C",
+            "surface-alt": "#F1F5E4",
+            "secondary-fixed-dim": "#b5d258",
+            "on-error": "#ffffff",
+            "on-surface-variant": "#444933",
+            "on-surface": "#1a1d10",
+            "surface-container-highest": "#e2e4cf",
+            "inverse-primary": "#abd600",
+            "primary-fixed-dim": "#abd600",
+            "tertiary-fixed-dim": "#b6c9d8",
+            "on-tertiary-fixed": "#0b1d29",
+            "on-primary-fixed": "#161e00",
+            "border-hairline": "#E2E7D2",
+            "support-strong": "#FF4BB2",
+            "inverse-on-surface": "#f0f3dd",
+            "accent-neon": "#CCFF00",
+            "danger-bg": "#FBE5E5",
+            "surface-container": "#edf0da",
+            "background": "#FAFCF4",
+            "success-text": "#0E7C3A",
+            "surface-tint": "#506600",
+            "secondary": "#516600",
+            "surface": "#FFFFFF",
+            "error": "#ba1a1a",
+            "primary": "#506600",
+            "tertiary": "#4f616e",
+            "border-strong": "#92975F",
+            "warning-bg": "#FAEFE1",
+            "on-secondary-fixed": "#161e00",
+            "primary-container": "#ccff00",
+            "warning-text": "#A75906",
+            "danger-text": "#CE2020",
+            "accent-tint": "#F8FFDB",
+            "info-text": "#5C7300",
+            "outline-variant": "#c4c9ac",
+            "info-bg": "#ECEFE0",
+            "surface-dim": "#d9dcc6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "20px",
+            "margin": "20px",
+            "space-2xl": "32px",
+            "space-xs": "4px",
+            "space-xl": "24px",
+            "space-md": "12px",
+            "space-lg": "16px",
+            "space-sm": "8px"
+          },
+          "fontFamily": {
+            "caption": ["Inter", "sans-serif"],
+            "display": ["Instrument Serif", "serif"],
+            "stat-display": ["Inter", "sans-serif"],
+            "title": ["Inter", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "stat-display": ["32px", { "lineHeight": "38px", "fontWeight": "700" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }]
+          },
+          "boxShadow": {
+            "kinetra-card": "0 1px 2px rgba(28,31,12,.04), 0 8px 24px rgba(28,31,12,.06)"
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body class="bg-background text-ink antialiased flex justify-center min-h-screen">
+<!-- Mobile Container: 393px width matching device frame specs -->
+<main class="w-full max-w-[393px] min-h-[852px] bg-background flex flex-col relative overflow-hidden shadow-2xl border-x border-border-hairline">
+<!-- Top System Backdrop & Modal Drag Handle (Safe Clearance) -->
+<header class="pt-3 pb-1 flex flex-col items-center bg-surface w-full">
+<div class="w-10 h-1.5 rounded-full bg-border-hairline mb-2"></div>
+<!-- Shared Component: TopAppBar -->
+<nav class="flex justify-between items-center w-full px-margin h-14 bg-surface dark:bg-inverse-surface border-b border-border-hairline dark:border-outline flat no shadows">
+<div class="flex items-center gap-2">
+<h1 class="font-title text-title font-semibold text-ink dark:text-inverse-on-surface">Add Exercise</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="font-label text-label font-medium text-text-secondary px-3 py-1.5 rounded-full hover:bg-surface-variant transition-colors duration-150 active:scale-95" type="button">
+            Filter
+          </button>
+<button aria-label="Close" class="w-8 h-8 flex items-center justify-center rounded-full text-ink hover:bg-surface-variant transition-colors duration-150 active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="close">close</span>
+</button>
+</div>
+</nav>
+</header>
+<!-- Main Scrollable Area -->
+<div class="flex-1 overflow-y-auto no-scrollbar px-margin pt-4 pb-28 space-y-4">
+<!-- Search Input Container -->
+<section aria-label="Exercise Search" class="relative">
+<div class="relative flex items-center w-full h-[52px] bg-surface rounded-xl border border-border-strong ring-2 ring-accent-fill/20 px-3.5 transition-all">
+<span class="material-symbols-outlined text-accent-fill text-[22px] mr-2.5 select-none" data-icon="search">search</span>
+<input class="w-full bg-transparent font-body text-body text-ink placeholder:text-text-tertiary focus:outline-none border-none p-0 focus:ring-0" placeholder="Search exercises..." type="text" value="press"/>
+<button aria-label="Clear text" class="w-6 h-6 flex items-center justify-center rounded-full text-text-tertiary hover:text-ink active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="cancel">cancel</span>
+</button>
+</div>
+</section>
+<!-- Muscle Group Filter Chips (Horizontal Scroll) -->
+<section aria-label="Filter Categories">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 -mx-margin px-margin">
+<!-- Chip: All -->
+<button class="h-8 px-4 rounded-full bg-accent-tint text-accent-fill font-caption text-caption flex items-center whitespace-nowrap active:scale-95 transition-transform" type="button">
+            All
+          </button>
+<!-- Chip: Chest (Selected) -->
+<button class="h-8 px-4 rounded-full bg-ink text-accent-neon font-caption text-caption font-semibold flex items-center whitespace-nowrap shadow-sm active:scale-95 transition-transform" type="button">
+            Chest
+          </button>
+<!-- Chip: Back -->
+<button class="h-8 px-4 rounded-full bg-accent-tint text-accent-fill font-caption text-caption flex items-center whitespace-nowrap active:scale-95 transition-transform" type="button">
+            Back
+          </button>
+<!-- Chip: Legs -->
+<button class="h-8 px-4 rounded-full bg-accent-tint text-accent-fill font-caption text-caption flex items-center whitespace-nowrap active:scale-95 transition-transform" type="button">
+            Legs
+          </button>
+<!-- Chip: Shoulders -->
+<button class="h-8 px-4 rounded-full bg-accent-tint text-accent-fill font-caption text-caption flex items-center whitespace-nowrap active:scale-95 transition-transform" type="button">
+            Shoulders
+          </button>
+<!-- Chip: Arms -->
+<button class="h-8 px-4 rounded-full bg-accent-tint text-accent-fill font-caption text-caption flex items-center whitespace-nowrap active:scale-95 transition-transform" type="button">
+            Arms
+          </button>
+<!-- Chip: Core -->
+<button class="h-8 px-4 rounded-full bg-accent-tint text-accent-fill font-caption text-caption flex items-center whitespace-nowrap active:scale-95 transition-transform" type="button">
+            Core
+          </button>
+</div>
+</section>
+<!-- Results Header Indicator -->
+<div class="flex items-center justify-between pt-1">
+<span class="font-caption text-caption text-text-secondary font-medium tracking-wide">5 EXERCISES MATCHING</span>
+<span class="font-caption text-caption text-accent-fill font-semibold">1 SELECTED</span>
+</div>
+<!-- Exercise List Stack -->
+<section aria-label="Exercise Results" class="space-y-3">
+<!-- Exercise Card 1 (Selected) -->
+<article class="flex items-center justify-between p-3.5 bg-surface rounded-2xl border border-accent-neon ring-1 ring-accent-neon shadow-kinetra-card active:scale-[0.99] transition-all cursor-pointer">
+<div class="flex items-center gap-3.5">
+<img class="w-[52px] h-[52px] rounded-xl object-cover border border-border-hairline shrink-0" data-alt="An athlete in focused form performing a barbell bench press inside an industrial urban gym with brick walls and large warehouse windows. Warm natural morning sunlight filters through, emphasizing physical strength and fitness discipline. High clarity realistic photograph matching a modern clean aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiTtDWwkfsIGj1xsG_5t658__H5vnKKNUakC1K3KHjy0VyG7QmzO1zs8Db99mXDyFguU5YTt3htpbcD6f38TISbi-QEzxcmBOCEipY9Asn1-1x8c5x1-xuaxqkB87xmne_2jB9S4zsAkvO8rbMnwyCOUaSnilS3h1jkIZVYfiZD4bmdTxaUsCNHZksnn_ccNlTR95eolQCYP7WwG4409TM8Q2WVgxZH_cvz5lhaK5IMPvVfe5AGL7N5x2e9tqROTyApnGCpgZaaORcpg"/>
+<div class="flex flex-col">
+<h2 class="font-body text-body font-semibold text-ink">Bench Press</h2>
+<span class="font-caption text-caption text-text-secondary">Chest • Barbell</span>
+</div>
+</div>
+<!-- Selected Checkbox Indicator -->
+<div class="w-6 h-6 rounded-full bg-accent-neon flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-ink text-[16px] font-bold" data-icon="check">check</span>
+</div>
+</article>
+<!-- Exercise Card 2 -->
+<article class="flex items-center justify-between p-3.5 bg-surface rounded-2xl border border-border-hairline shadow-kinetra-card active:scale-[0.99] transition-all cursor-pointer hover:border-border-strong">
+<div class="flex items-center gap-3.5">
+<img alt="Gym bench equipment" class="w-[52px] h-[52px] rounded-xl object-cover border border-border-hairline shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrDgoNoJ9A9R6DBUtsvZzBpwtmuXfnVtaDYtfGHYPi4taRENzr3e2RLtmUFBQ0rnvj8vDu4sa5jq0wqq6yJa8r0NfG8VHMG4peUmfu0APnOipGhusf13tBk5MVZxCy-wK7YvHLT3HnAEHZkUV02NjwBU1IJa3bsQ_x_LFyE1lTvitJTM4ob8DA6AY4UIHTuGc2JSEKTQGcJUZ_hy-CVd56Qsy7Uv9Z-w-H0v8KKetaxWwkymTACNJ3qfXhZdMA"/>
+<div class="flex flex-col">
+<h2 class="font-body text-body font-semibold text-ink">Incline Dumbbell Press</h2>
+<span class="font-caption text-caption text-text-secondary">Chest • Dumbbell</span>
+</div>
+</div>
+<!-- Unchecked Radio Indicator -->
+<div class="w-6 h-6 rounded-full border-[1.5px] border-border-strong shrink-0"></div>
+</article>
+<!-- Exercise Card 3 -->
+<article class="flex items-center justify-between p-3.5 bg-surface rounded-2xl border border-border-hairline shadow-kinetra-card active:scale-[0.99] transition-all cursor-pointer hover:border-border-strong">
+<div class="flex items-center gap-3.5">
+<img class="w-[52px] h-[52px] rounded-xl object-cover border border-border-hairline shrink-0" data-alt="Heavy loaded Olympic barbell resting on a sturdy black steel squat rack in a sunlit performance training gym facility. Industrial loft windows in the background casting gentle morning light across clean rubber flooring. Grounded realistic gym photograph with sharp focus and authentic atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2OK-ane6cEXB27Yq4BhEON-XZsxh7wc1GYeV_-qMlHSdQRygr2bij9tyG7ibCIAxG2tML8BK30RV-EdOcyU1tnJOuvtiN92HLAVTG6oAVc496gvPlOsvALk8zLFH8lxOviSbugQCYHtxlnRgh1zdtD66NxrpmCQxLMja_AdrzpZuoMLk3mf_LSQFmDFlnNjGoPJRj33GgqWsgDLARanHCltUgn99a73wHgnoRHhXkp9l3Wr5hBWmzzrWkkng-H8zyfWoTvKjprt0NHQ"/>
+<div class="flex flex-col">
+<h2 class="font-body text-body font-semibold text-ink">Overhead Press</h2>
+<span class="font-caption text-caption text-text-secondary">Shoulders • Barbell</span>
+</div>
+</div>
+<!-- Unchecked Radio Indicator -->
+<div class="w-6 h-6 rounded-full border-[1.5px] border-border-strong shrink-0"></div>
+</article>
+<!-- Exercise Card 4 -->
+<article class="flex items-center justify-between p-3.5 bg-surface rounded-2xl border border-border-hairline shadow-kinetra-card active:scale-[0.99] transition-all cursor-pointer hover:border-border-strong">
+<div class="flex items-center gap-3.5">
+<img class="w-[52px] h-[52px] rounded-xl object-cover border border-border-hairline shrink-0" data-alt="Modern 45 degree leg press fitness machine in an open-concept boutique gym space. Clean geometric steel frame, high quality black padding, and metallic weight sleeves softly illuminated by daylight. Crisp, authentic athletic facility photo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARLcRIUYVGojiXIkYRrQxRYzAVzqHw8TSH_bTgvJbhSNWa2VuPss8VgZ1e1vTqrIUZd78BMBigDggOWWK8s6inFRfEnnWRjJvjDRufcjmZ4wLhZMxNqMqS_4WJa1VLsWLn01XN-4OYEEkO7-ku9j3kcwoHR9xjad_2UcorZxbukIAXKZKy4zMgvoJyelgFy0Pozs_Cvp96Wa-I8BmvaguoUEcMIlOYWQHlmFCO0R02NDGRsPqQf6S-tJzteML-rjZdm0TFaSNJlI0xEQ"/>
+<div class="flex flex-col">
+<h2 class="font-body text-body font-semibold text-ink">Leg Press</h2>
+<span class="font-caption text-caption text-text-secondary">Legs • Machine</span>
+</div>
+</div>
+<!-- Unchecked Radio Indicator -->
+<div class="w-6 h-6 rounded-full border-[1.5px] border-border-strong shrink-0"></div>
+</article>
+<!-- Exercise Card 5 -->
+<article class="flex items-center justify-between p-3.5 bg-surface rounded-2xl border border-border-hairline shadow-kinetra-card active:scale-[0.99] transition-all cursor-pointer hover:border-border-strong">
+<div class="flex items-center gap-3.5">
+<img class="w-[52px] h-[52px] rounded-xl object-cover border border-border-hairline shrink-0" data-alt="Sturdy barbell loaded with black bumper plates positioned securely on training stands in a high ceiling cross-training gym studio. Raw brick architectural background with expansive window reflections. Natural, energetic, professional fitness lifestyle capture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClhEqcVBF3b8yfmVq3tQCrcLGxSoxNPvFQ14IGmu-upmcep4WIPFlbKT8v1tXNJVvmEBKsubTLzX97nXKBYozA3HCQI8ehmaJsjzBJbUhPBvF3jJz7Nyq_a6lZiF74Qle03-3qRrG02n106Cy5CLKiwQ9wLCR0Uz7hqK7_QKt0hFguscUtvHaHrWgRxGBrGUXDg8Mz8u7duIlK1vc4jio2_c8ZYv_1nqDj9VuJE34s50fribXccE2ER8ALi71ZzbaV4XhQZxNgxZV8Cw"/>
+<div class="flex flex-col">
+<h2 class="font-body text-body font-semibold text-ink">Push Press</h2>
+<span class="font-caption text-caption text-text-secondary">Shoulders • Barbell</span>
+</div>
+</div>
+<!-- Unchecked Radio Indicator -->
+<div class="w-6 h-6 rounded-full border-[1.5px] border-border-strong shrink-0"></div>
+</article>
+</section>
+<!-- Quick Creation Prompt -->
+<div class="pt-2 pb-4 text-center">
+<button class="inline-flex items-center gap-1.5 text-accent-fill font-label text-label hover:underline" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_circle">add_circle</span>
+<span>Create custom exercise</span>
+</button>
+</div>
+</div>
+<!-- Sticky Bottom Action Dock -->
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background via-background/95 to-transparent pt-6 pb-[34px] px-margin pointer-events-none">
+<div class="pointer-events-auto">
+<button class="w-full h-14 bg-accent-neon hover:bg-accent-pressed active:bg-[#B8E600] text-ink font-body font-semibold rounded-full flex items-center justify-center gap-2 shadow-lg transition-transform active:scale-[0.98]" type="button">
+<span>Add 1 exercise</span>
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+</body></html>

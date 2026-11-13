@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=393, height=852, initial-scale=1.0" name="viewport"/>
+<title>Kinetra - Workout Complete</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "info-text": "#5C7300",
+            "info-bg": "#ECEFE0",
+            "accent-fill": "#647D00",
+            "accent-tint": "#F8FFDB",
+            "surface-tint": "#506600",
+            "on-tertiary-fixed": "#0b1d29",
+            "surface-container-low": "#f3f5df",
+            "on-error": "#ffffff",
+            "text-tertiary": "#6A6F52",
+            "error-container": "#ffdad6",
+            "on-secondary": "#ffffff",
+            "ink": "#1C1F0C",
+            "secondary-fixed": "#d0ef71",
+            "on-background": "#1a1d10",
+            "on-secondary-fixed": "#161e00",
+            "on-secondary-container": "#566c00",
+            "error": "#ba1a1a",
+            "tertiary-fixed": "#d2e5f5",
+            "accent-neon": "#CCFF00",
+            "background": "#FAFCF4",
+            "success-bg": "#E3F4E9",
+            "inverse-on-surface": "#f0f3dd",
+            "surface-bright": "#f9fbe5",
+            "success-text": "#0E7C3A",
+            "primary": "#506600",
+            "border-strong": "#92975F",
+            "border-hairline": "#E2E7D2",
+            "surface-dim": "#d9dcc6",
+            "on-primary-fixed": "#161e00",
+            "primary-container": "#ccff00",
+            "danger-text": "#CE2020",
+            "support-strong": "#FF4BB2",
+            "on-tertiary-container": "#5b6d7a",
+            "surface-alt": "#F1F5E4",
+            "on-surface-variant": "#444933",
+            "inverse-primary": "#abd600",
+            "surface-container-highest": "#e2e4cf",
+            "on-primary-container": "#5b7300",
+            "tertiary": "#4f616e",
+            "tertiary-container": "#dcefff",
+            "accent-pressed": "#586E00",
+            "inverse-surface": "#2f3223",
+            "text-secondary": "#4B5034",
+            "surface": "#FFFFFF",
+            "on-error-container": "#93000a",
+            "surface-variant": "#e2e4cf",
+            "on-primary-fixed-variant": "#3c4d00",
+            "danger-bg": "#FBE5E5",
+            "secondary-container": "#d0ef71",
+            "outline": "#747a60",
+            "support-pink": "#FF9BD2",
+            "primary-fixed-dim": "#abd600",
+            "warning-text": "#A75906",
+            "on-secondary-fixed-variant": "#3c4d00",
+            "secondary-fixed-dim": "#b5d258",
+            "surface-container-high": "#e7ead4",
+            "on-tertiary-fixed-variant": "#374956",
+            "secondary": "#516600",
+            "outline-variant": "#c4c9ac",
+            "primary-fixed": "#c3f400",
+            "on-primary": "#ffffff",
+            "on-surface": "#1a1d10",
+            "on-tertiary": "#ffffff",
+            "warning-bg": "#FAEFE1",
+            "surface-container": "#edf0da",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed-dim": "#b6c9d8"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "card": "20px",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "20px",
+            "space-2xl": "32px",
+            "space-xs": "4px",
+            "space-sm": "8px",
+            "space-xl": "24px",
+            "space-md": "12px",
+            "gutter": "20px",
+            "space-lg": "16px"
+          },
+          "fontFamily": {
+            "title": ["Inter"],
+            "label": ["Inter"],
+            "body": ["Inter"],
+            "stat-display": ["Inter"],
+            "caption": ["Inter"],
+            "display": ["Instrument Serif"]
+          },
+          "fontSize": {
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "stat-display": ["32px", { "lineHeight": "38px", "fontWeight": "700" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }]
+          },
+          "boxShadow": {
+            "kinetra-card": "0 1px 2px rgba(28,31,12,0.04), 0 8px 24px rgba(28,31,12,0.06)"
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 350, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Hide scrollbars cleanly */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-ink font-body antialiased flex justify-center items-start min-h-screen">
+<!-- Mobile Frame Container (393px x 852px) -->
+<div class="relative w-full max-w-[393px] h-[852px] bg-background flex flex-col justify-between overflow-hidden shadow-2xl">
+<!-- Top Nav Anchor (Shared Component: TopAppBar Small) -->
+<header class="w-full bg-background pt-[59px] border-b border-border-hairline select-none flex-shrink-0 z-30">
+<div class="w-full max-w-[393px] mx-auto flex items-center justify-between px-margin h-14">
+<!-- Leading: Close Icon -->
+<button aria-label="Close" class="w-10 h-10 -ml-2 rounded-full flex items-center justify-center text-ink hover:bg-surface-alt active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[24px]" data-icon="close">close</span>
+</button>
+<!-- Brand/Context Headline -->
+<h1 class="text-title font-title font-bold text-ink tracking-tight text-center truncate px-2">
+          Upper Body Power
+        </h1>
+<!-- Trailing Action: Share -->
+<button class="text-label font-label font-semibold text-primary hover:bg-surface-alt px-3 py-1.5 rounded-full active:scale-95 transition-transform duration-150" type="button">
+          Share
+        </button>
+</div>
+</header>
+<!-- Scrollable Content Canvas -->
+<main class="flex-1 overflow-y-auto no-scrollbar pb-32">
+<!-- Distinctive Neon Banner Block -->
+<section class="mx-margin mt-4 bg-accent-neon rounded-[24px] px-6 py-5 border border-border-hairline shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="text-display font-display text-ink text-[34px] leading-tight">
+              Workout complete
+            </h2>
+<p class="text-caption font-caption text-ink font-medium mt-1">
+              Upper Body Power, Thu Nov 13
+            </p>
+</div>
+<div class="w-12 h-12 rounded-full bg-ink flex items-center justify-center flex-shrink-0 text-accent-neon shadow-sm">
+<span class="material-symbols-outlined text-[26px]" data-icon="check_circle">check_circle</span>
+</div>
+</div>
+</section>
+<!-- Focal Stat Block -->
+<section class="px-margin mt-6 text-center flex flex-col items-center">
+<span class="text-label font-label text-text-secondary">
+          Total volume
+        </span>
+<div class="text-stat-display font-stat-display text-ink tracking-tight text-[44px] leading-none mt-1.5 mb-2.5">
+          7,140 kg
+        </div>
+<!-- Trend / Success Chip -->
+<div class="inline-flex items-center gap-1.5 bg-success-bg text-success-text px-3 py-1 rounded-full text-caption font-caption font-semibold">
+<span class="material-symbols-outlined text-[16px] text-success-text" data-icon="trending_up">trending_up</span>
+<span>+4.7% vs last time</span>
+</div>
+</section>
+<!-- 2x2 Stat Grid -->
+<section class="px-margin mt-6 grid grid-cols-2 gap-3">
+<!-- Stat 1: Duration -->
+<div class="bg-surface rounded-card p-4 border border-border-hairline shadow-kinetra-card flex flex-col justify-between h-[104px]">
+<div class="flex items-center justify-between">
+<span class="text-label font-label text-text-secondary">Duration</span>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]" data-icon="timer">timer</span>
+</div>
+<div class="text-title font-title font-bold text-ink text-[22px] tracking-tight">
+            47:12
+          </div>
+</div>
+<!-- Stat 2: Sets -->
+<div class="bg-surface rounded-card p-4 border border-border-hairline shadow-kinetra-card flex flex-col justify-between h-[104px]">
+<div class="flex items-center justify-between">
+<span class="text-label font-label text-text-secondary">Sets</span>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]" data-icon="layers">layers</span>
+</div>
+<div class="text-title font-title font-bold text-ink text-[22px] tracking-tight">
+            21
+          </div>
+</div>
+<!-- Stat 3: Reps -->
+<div class="bg-surface rounded-card p-4 border border-border-hairline shadow-kinetra-card flex flex-col justify-between h-[104px]">
+<div class="flex items-center justify-between">
+<span class="text-label font-label text-text-secondary">Reps</span>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]" data-icon="fitness_center">fitness_center</span>
+</div>
+<div class="text-title font-title font-bold text-ink text-[22px] tracking-tight">
+            168
+          </div>
+</div>
+<!-- Stat 4: Calories -->
+<div class="bg-surface rounded-card p-4 border border-border-hairline shadow-kinetra-card flex flex-col justify-between h-[104px]">
+<div class="flex items-center justify-between">
+<span class="text-label font-label text-text-secondary">Calories</span>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]" data-icon="local_fire_department">local_fire_department</span>
+</div>
+<div class="text-title font-title font-bold text-ink text-[22px] tracking-tight">
+            410 <span class="text-caption font-caption text-text-tertiary font-normal">kcal</span>
+</div>
+</div>
+</section>
+<!-- Personal Record Highlight Card -->
+<section class="px-margin mt-4">
+<div class="bg-surface rounded-card p-4 border border-border-hairline shadow-kinetra-card flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-accent-tint flex items-center justify-center flex-shrink-0 text-accent-fill border border-border-hairline">
+<span class="material-symbols-outlined text-[24px]" data-icon="trophy">trophy</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-caption font-caption uppercase tracking-wider font-semibold text-accent-fill">New personal record</span>
+</div>
+<div class="text-title font-title font-semibold text-ink truncate mt-0.5">
+              Bench Press 75 kg × 6
+            </div>
+<div class="text-caption font-caption text-text-tertiary mt-0.5">
+              +2.5 kg over previous best on Oct 28
+            </div>
+</div>
+</div>
+</section>
+<!-- Goal Progress Card -->
+<section class="px-margin mt-4">
+<div class="bg-surface rounded-card p-5 border border-border-hairline shadow-kinetra-card">
+<div class="flex items-center justify-between mb-3">
+<span class="text-title font-title font-semibold text-ink text-[16px]">Goal progress</span>
+<span class="text-caption font-caption text-text-tertiary font-medium">Upper Body</span>
+</div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-label font-label text-ink font-medium">Bench press 80 kg</span>
+<span class="text-label font-label text-ink font-bold">94%</span>
+</div>
+<!-- Progress Bar (8px pill) -->
+<div class="w-full h-2 bg-surface-alt rounded-full overflow-hidden mb-2">
+<div class="h-full bg-accent-fill rounded-full" style="width: 94%;"></div>
+</div>
+<div class="flex items-center gap-1.5 mt-2 text-text-secondary text-caption font-caption">
+<span class="material-symbols-outlined text-[16px] text-accent-fill" data-icon="flag">flag</span>
+<span>Only 5 kg away from your target</span>
+</div>
+</div>
+</section>
+<!-- Workout Feedback Section -->
+<section class="px-margin mt-6 mb-2">
+<h3 class="text-body font-body font-semibold text-ink mb-3">
+          How did it feel?
+        </h3>
+<div class="grid grid-cols-3 gap-2.5">
+<!-- Easy Chip -->
+<button class="h-10 rounded-full bg-accent-tint text-accent-fill text-caption font-caption font-medium flex items-center justify-center border border-border-hairline active:scale-95 transition-transform duration-150" type="button">
+            Easy
+          </button>
+<!-- Good Chip (Selected / Active State) -->
+<button class="h-10 rounded-full bg-ink text-accent-neon text-caption font-caption font-semibold flex items-center justify-center shadow-sm active:scale-95 transition-transform duration-150" type="button">
+            Good
+          </button>
+<!-- Hard Chip -->
+<button class="h-10 rounded-full bg-accent-tint text-accent-fill text-caption font-caption font-medium flex items-center justify-center border border-border-hairline active:scale-95 transition-transform duration-150" type="button">
+            Hard
+          </button>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom Action (Full-width Ink Button) -->
+<footer class="absolute bottom-0 inset-x-0 bg-background/95 backdrop-blur-md pt-3 pb-[34px] px-margin border-t border-border-hairline/60 z-40">
+<button class="w-full h-14 bg-ink text-surface rounded-full text-body font-body font-semibold flex items-center justify-center shadow-lg active:scale-[0.98] transition-all duration-150" type="button">
+        Save workout
+      </button>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>Kinetra - Goals</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration verbatim from Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-variant": "#e2e4cf",
+            "success-text": "#0E7C3A",
+            "on-secondary-container": "#566c00",
+            "danger-bg": "#FBE5E5",
+            "text-tertiary": "#6A6F52",
+            "on-secondary": "#ffffff",
+            "danger-text": "#CE2020",
+            "tertiary-container": "#dcefff",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed-variant": "#3c4d00",
+            "on-primary": "#ffffff",
+            "surface-container": "#edf0da",
+            "accent-neon": "#CCFF00",
+            "on-error": "#ffffff",
+            "surface-container-high": "#e7ead4",
+            "info-bg": "#ECEFE0",
+            "secondary-container": "#d0ef71",
+            "primary-fixed-dim": "#abd600",
+            "on-surface-variant": "#444933",
+            "accent-fill": "#647D00",
+            "success-bg": "#E3F4E9",
+            "on-background": "#1a1d10",
+            "accent-tint": "#F8FFDB",
+            "on-primary-fixed": "#161e00",
+            "on-primary-container": "#5b7300",
+            "secondary-fixed": "#d0ef71",
+            "support-pink": "#FF9BD2",
+            "support-strong": "#FF4BB2",
+            "background": "#FAFCF4",
+            "on-tertiary-fixed": "#0b1d29",
+            "inverse-on-surface": "#f0f3dd",
+            "on-secondary-fixed": "#161e00",
+            "inverse-surface": "#2f3223",
+            "accent-pressed": "#586E00",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed-variant": "#3c4d00",
+            "surface": "#FFFFFF",
+            "secondary-fixed-dim": "#b5d258",
+            "outline-variant": "#c4c9ac",
+            "info-text": "#5C7300",
+            "warning-bg": "#FAEFE1",
+            "primary": "#506600",
+            "surface-container-low": "#f3f5df",
+            "secondary": "#516600",
+            "primary-container": "#ccff00",
+            "tertiary": "#4f616e",
+            "inverse-primary": "#abd600",
+            "on-surface": "#1a1d10",
+            "warning-text": "#A75906",
+            "surface-tint": "#506600",
+            "ink": "#1C1F0C",
+            "error-container": "#ffdad6",
+            "border-hairline": "#E2E7D2",
+            "border-strong": "#92975F",
+            "on-tertiary-fixed-variant": "#374956",
+            "outline": "#747a60",
+            "surface-bright": "#f9fbe5",
+            "on-error-container": "#93000a",
+            "surface-dim": "#d9dcc6",
+            "on-tertiary-container": "#5b6d7a",
+            "text-secondary": "#4B5034",
+            "tertiary-fixed-dim": "#b6c9d8",
+            "tertiary-fixed": "#d2e5f5",
+            "error": "#ba1a1a",
+            "surface-alt": "#F1F5E4",
+            "primary-fixed": "#c3f400",
+            "surface-container-highest": "#e2e4cf"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "20px",
+            "space-xs": "4px",
+            "space-sm": "8px",
+            "space-lg": "16px",
+            "space-md": "12px",
+            "gutter": "20px",
+            "space-2xl": "32px",
+            "space-xl": "24px"
+          },
+          "fontFamily": {
+            "display": ["Instrument Serif", "serif"],
+            "stat-display": ["Inter", "sans-serif"],
+            "caption": ["Inter", "sans-serif"],
+            "title": ["Inter", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "stat-display": ["32px", { "lineHeight": "38px", "fontWeight": "700" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }]
+          },
+          "boxShadow": {
+            "card-dual": "0 1px 2px rgba(28, 31, 12, 0.04), 0 8px 24px rgba(28, 31, 12, 0.06)",
+            "nav-subtle": "0 -1px 3px rgba(28, 31, 12, 0.04)"
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 24px;
+      line-height: 1;
+      display: inline-block;
+    }
+    /* Hide scrollbar for seamless mobile simulation */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    * {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#e9ebe0] flex justify-center items-center min-h-screen font-body text-ink antialiased">
+<!-- Mobile Simulator Frame (iPhone 16 / 393 x 852 px) -->
+<div class="relative w-[393px] h-[852px] bg-background overflow-hidden flex flex-col shadow-2xl rounded-[48px] border-[6px] border-[#222416]">
+<!-- Status Bar (Safe Area Top: 59px) -->
+<header class="w-full h-[59px] pt-3 px-8 flex justify-between items-center z-30 select-none bg-background">
+<span class="font-label text-label text-ink font-semibold tracking-tight">9:41</span>
+<div class="flex items-center gap-1.5 text-ink">
+<span class="material-symbols-outlined text-[18px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[18px]">wifi</span>
+<span class="material-symbols-outlined text-[20px]">battery_full</span>
+</div>
+</header>
+<!-- TopAppBar Component (from Shared Components JSON & Specifications) -->
+<div class="w-full h-14 px-5 flex items-center justify-between z-20 bg-background">
+<div class="flex items-center gap-2">
+<h1 class="font-display text-display text-ink font-normal tracking-tight">Goals</h1>
+</div>
+<button aria-label="Add new goal" class="w-10 h-10 rounded-full bg-surface-alt flex items-center justify-center text-ink border border-border-hairline active:scale-95 transition-transform hover:bg-surface-variant duration-150">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+<!-- Scrollable Screen Content Canvas -->
+<main class="flex-1 overflow-y-auto px-5 pt-3 pb-28 flex flex-col gap-5">
+<!-- Hero Card: Active Goals Overview (Ink #1C1F0C with Neon #CCFF00 accents) -->
+<section class="w-full bg-ink rounded-[20px] p-5 text-white shadow-card-dual relative overflow-hidden flex flex-col justify-between">
+<!-- Subtle Glow Layer -->
+<div class="absolute -top-12 -right-12 w-36 h-36 bg-accent-neon opacity-10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-accent-neon mb-2">
+<span class="w-2 h-2 rounded-full bg-accent-neon animate-pulse"></span>
+<span class="font-caption text-caption uppercase tracking-wider font-semibold">Active Targets</span>
+</div>
+<h2 class="font-title text-title text-white font-bold leading-tight">Monthly Horizon</h2>
+</div>
+<div class="text-right">
+<span class="font-stat-display text-stat-display text-accent-neon font-bold leading-none">3</span>
+<span class="font-caption text-caption text-surface-dim block">active goals</span>
+</div>
+</div>
+<!-- Radial Streak & Momentum Stats Row -->
+<div class="pt-3 border-t border-white/10 grid grid-cols-3 gap-2 relative z-10">
+<div>
+<span class="font-caption text-caption text-surface-variant block">Average Pace</span>
+<span class="font-label text-label text-white font-semibold">70.3%</span>
+</div>
+<div>
+<span class="font-caption text-caption text-surface-variant block">Active Streak</span>
+<span class="font-label text-label text-accent-neon font-semibold">14 Days</span>
+</div>
+<div>
+<span class="font-caption text-caption text-surface-variant block">Due Soon</span>
+<span class="font-label text-label text-support-pink font-semibold">12 Days</span>
+</div>
+</div>
+</section>
+<!-- Section Title & Filter Chips -->
+<div class="flex items-center justify-between pt-1">
+<h3 class="font-title text-title text-ink font-semibold">In Progress</h3>
+<span class="font-caption text-caption text-text-tertiary">3 of 4 On Track</span>
+</div>
+<!-- Active Goals List -->
+<section class="flex flex-col gap-4">
+<!-- Goal 1: Bench press 80 kg -->
+<article class="bg-surface rounded-[20px] p-4 shadow-card-dual border border-border-hairline hover:border-border-strong transition-colors">
+<div class="flex items-start justify-between mb-3">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-full bg-accent-tint flex items-center justify-center text-accent-fill shrink-0">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+</div>
+<div>
+<h4 class="font-label text-label text-ink font-semibold">Bench press 80 kg</h4>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-caption text-caption text-text-secondary">Current: 72.5 kg</span>
+<span class="w-1 h-1 rounded-full bg-border-strong"></span>
+<span class="font-caption text-caption text-text-tertiary">Target: 80 kg</span>
+</div>
+</div>
+</div>
+<span class="font-label text-label font-bold text-accent-fill bg-accent-tint px-2.5 py-0.5 rounded-full">78%</span>
+</div>
+<!-- Progress Bar Component -->
+<div class="w-full bg-surface-alt h-2.5 rounded-full overflow-hidden p-0.5 mb-3 border border-border-hairline">
+<div class="bg-accent-fill h-full rounded-full transition-all duration-500" style="width: 78%"></div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-border-hairline">
+<div class="flex items-center gap-1.5 text-text-tertiary">
+<span class="material-symbols-outlined text-[16px]" data-icon="calendar_today">calendar_today</span>
+<span class="font-caption text-caption">Due Oct 30, 2025</span>
+</div>
+<span class="font-caption text-caption text-success-text font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span> +2.5 kg this week
+            </span>
+</div>
+</article>
+<!-- Goal 2: Run 50 km this month -->
+<article class="bg-surface rounded-[20px] p-4 shadow-card-dual border border-border-hairline hover:border-border-strong transition-colors">
+<div class="flex items-start justify-between mb-3">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-full bg-surface-alt flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="directions_run">directions_run</span>
+</div>
+<div>
+<h4 class="font-label text-label text-ink font-semibold">Run 50 km this month</h4>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-caption text-caption text-text-secondary">Current: 31.4 km</span>
+<span class="w-1 h-1 rounded-full bg-border-strong"></span>
+<span class="font-caption text-caption text-text-tertiary">Target: 50 km</span>
+</div>
+</div>
+</div>
+<span class="font-label text-label font-bold text-ink bg-surface-container-high px-2.5 py-0.5 rounded-full">63%</span>
+</div>
+<!-- Progress Bar Component -->
+<div class="w-full bg-surface-alt h-2.5 rounded-full overflow-hidden p-0.5 mb-3 border border-border-hairline">
+<div class="bg-accent-neon h-full rounded-full transition-all duration-500 shadow-sm" style="width: 63%"></div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-border-hairline">
+<div class="flex items-center gap-1.5 text-text-tertiary">
+<span class="material-symbols-outlined text-[16px]" data-icon="pace">pace</span>
+<span class="font-caption text-caption">18.6 km remaining</span>
+</div>
+<span class="font-caption text-caption text-text-secondary font-medium">9 days left</span>
+</div>
+</article>
+<!-- Goal 3: Squat 120 kg -->
+<article class="bg-surface rounded-[20px] p-4 shadow-card-dual border border-border-hairline hover:border-border-strong transition-colors">
+<div class="flex items-start justify-between mb-3">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-full bg-accent-tint flex items-center justify-center text-accent-fill shrink-0">
+<span class="material-symbols-outlined" data-icon="sports_gymnastics">sports_gymnastics</span>
+</div>
+<div>
+<h4 class="font-label text-label text-ink font-semibold">Squat 120 kg</h4>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-caption text-caption text-text-secondary">Current: 100 kg</span>
+<span class="w-1 h-1 rounded-full bg-border-strong"></span>
+<span class="font-caption text-caption text-text-tertiary">Target: 120 kg</span>
+</div>
+</div>
+</div>
+<span class="font-label text-label font-semibold text-warning-text bg-warning-bg px-2.5 py-0.5 rounded-full">20 kg to go</span>
+</div>
+<!-- Progress Bar Component -->
+<div class="w-full bg-surface-alt h-2.5 rounded-full overflow-hidden p-0.5 mb-3 border border-border-hairline">
+<div class="bg-accent-fill h-full rounded-full transition-all duration-500" style="width: 83%"></div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-border-hairline">
+<div class="flex items-center gap-1.5 text-text-tertiary">
+<span class="material-symbols-outlined text-[16px]" data-icon="event">event</span>
+<span class="font-caption text-caption">Target: Nov 15</span>
+</div>
+<span class="font-caption text-caption text-accent-fill font-medium">Deload phase active</span>
+</div>
+</article>
+</section>
+<!-- Secondary CTA: Create New Goal Button -->
+<section class="pt-2">
+<button class="w-full h-14 rounded-full bg-accent-neon text-ink font-label text-label font-semibold flex items-center justify-center gap-2 shadow-sm hover:brightness-95 active:scale-[0.98] transition-transform duration-150">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+          Create new goal
+        </button>
+<p class="font-caption text-caption text-center text-text-tertiary mt-2">
+          Log a new personal record and your goals update on their own
+        </p>
+</section>
+</main>
+<!-- BottomNavBar Component (Shared Components JSON & Constraints) -->
+<!-- Fixed 5 tabs in exact order: Today, Workouts, Goals (ACTIVE), Progress, Profile -->
+<nav class="fixed bottom-0 left-0 w-full h-20 bg-surface border-t border-border-hairline flex items-center justify-around px-2 pb-safe shadow-nav-subtle z-50">
+<!-- Tab 1: Today (Inactive) -->
+<button class="flex flex-col items-center justify-center text-text-secondary hover:text-ink transition-colors active:scale-95 duration-150 w-16">
+<span class="material-symbols-outlined text-[22px]" data-icon="calendar_today">calendar_today</span>
+<span class="font-caption text-caption text-text-secondary mt-1">Today</span>
+</button>
+<!-- Tab 2: Workouts (Inactive) -->
+<button class="flex flex-col items-center justify-center text-text-secondary hover:text-ink transition-colors active:scale-95 duration-150 w-16">
+<span class="material-symbols-outlined text-[22px]" data-icon="fitness_center">fitness_center</span>
+<span class="font-caption text-caption text-text-secondary mt-1">Workouts</span>
+</button>
+<!-- Tab 3: Goals (ACTIVE) -->
+<button class="flex flex-col items-center justify-center text-ink font-semibold active:scale-95 duration-150 w-16">
+<span class="material-symbols-outlined text-[22px] bg-accent-neon text-ink px-3 py-0.5 rounded-full inline-flex items-center justify-center" data-icon="track_changes">track_changes</span>
+<span class="font-caption text-caption text-ink font-semibold mt-1">Goals</span>
+</button>
+<!-- Tab 4: Progress (Inactive) -->
+<button class="flex flex-col items-center justify-center text-text-secondary hover:text-ink transition-colors active:scale-95 duration-150 w-16">
+<span class="material-symbols-outlined text-[22px]" data-icon="monitoring">monitoring</span>
+<span class="font-caption text-caption text-text-secondary mt-1">Progress</span>
+</button>
+<!-- Tab 5: Profile (Inactive) -->
+<button class="flex flex-col items-center justify-center text-text-secondary hover:text-ink transition-colors active:scale-95 duration-150 w-16">
+<span class="material-symbols-outlined text-[22px]" data-icon="person">person</span>
+<span class="font-caption text-caption text-text-secondary mt-1">Profile</span>
+</button>
+</nav>
+<!-- Home Indicator (Safe Area Bottom clearance) -->
+<div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-32 h-1 bg-ink/25 rounded-full pointer-events-none z-50"></div>
+</div>
+</body></html>

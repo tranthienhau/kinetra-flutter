@@ -1,0 +1,209 @@
+[
+ {
+  "name": "welcome-hero",
+  "file": "assets/images/welcome-hero.jpg",
+  "role": "hero",
+  "screens": [
+   "01-welcome"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (01-welcome)"
+ },
+ {
+  "name": "goal-strength",
+  "file": "assets/images/goal-strength.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "02-goal-setup"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (02-goal-setup)"
+ },
+ {
+  "name": "goal-weight",
+  "file": "assets/images/goal-weight.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "02-goal-setup"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (02-goal-setup)"
+ },
+ {
+  "name": "goal-run",
+  "file": "assets/images/goal-run.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "02-goal-setup",
+   "05-workouts"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (02-goal-setup, 05-workouts)"
+ },
+ {
+  "name": "goal-active",
+  "file": "assets/images/goal-active.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "02-goal-setup"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (02-goal-setup)"
+ },
+ {
+  "name": "avatar-alex",
+  "file": "assets/images/avatar-alex.jpg",
+  "role": "avatar",
+  "screens": [
+   "03-today",
+   "04-today-empty",
+   "12-progress",
+   "14-profile"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (03-today, 04-today-empty, 12-progress, 14-profile)"
+ },
+ {
+  "name": "barbell-floor",
+  "file": "assets/images/barbell-floor.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "03-today",
+   "06-workout-detail"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (03-today, 06-workout-detail)"
+ },
+ {
+  "name": "empty-bench",
+  "file": "assets/images/empty-bench.jpg",
+  "role": "illustration",
+  "screens": [
+   "04-today-empty"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (04-today-empty)"
+ },
+ {
+  "name": "plan-pullups",
+  "file": "assets/images/plan-pullups.jpg",
+  "role": "cover",
+  "screens": [
+   "05-workouts"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (05-workouts)"
+ },
+ {
+  "name": "routine-upper",
+  "file": "assets/images/routine-upper.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "05-workouts"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (05-workouts)"
+ },
+ {
+  "name": "routine-legs",
+  "file": "assets/images/routine-legs.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "05-workouts"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (05-workouts)"
+ },
+ {
+  "name": "routine-core",
+  "file": "assets/images/routine-core.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "05-workouts"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (05-workouts)"
+ },
+ {
+  "name": "detail-bench-press",
+  "file": "assets/images/detail-bench-press.jpg",
+  "role": "hero",
+  "screens": [
+   "06-workout-detail"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (06-workout-detail)"
+ },
+ {
+  "name": "ex-pullup",
+  "file": "assets/images/ex-pullup.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "06-workout-detail",
+   "07-active-workout"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (06-workout-detail, 07-active-workout)"
+ },
+ {
+  "name": "ex-overhead-press",
+  "file": "assets/images/ex-overhead-press.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "06-workout-detail",
+   "07-active-workout"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (06-workout-detail, 07-active-workout)"
+ },
+ {
+  "name": "ex-plank",
+  "file": "assets/images/ex-plank.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "06-workout-detail"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (06-workout-detail)"
+ },
+ {
+  "name": "ex-bench-press",
+  "file": "assets/images/ex-bench-press.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "08-exercise-picker"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (08-exercise-picker)"
+ },
+ {
+  "name": "ex-incline-press",
+  "file": "assets/images/ex-incline-press.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "08-exercise-picker"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (08-exercise-picker)"
+ },
+ {
+  "name": "ex-leg-press",
+  "file": "assets/images/ex-leg-press.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "08-exercise-picker"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (08-exercise-picker)"
+ },
+ {
+  "name": "ex-push-press",
+  "file": "assets/images/ex-push-press.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "08-exercise-picker"
+  ],
+  "source": "stitch",
+  "prompt": "Real photo harvested from the Stitch screen (08-exercise-picker)"
+ }
+]

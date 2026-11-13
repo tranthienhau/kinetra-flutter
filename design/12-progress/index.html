@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Progress - Kinetra</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "error-container": "#ffdad6",
+            "secondary-container": "#d0ef71",
+            "success-text": "#0E7C3A",
+            "on-primary-fixed-variant": "#3c4d00",
+            "ink": "#1C1F0C",
+            "surface-container-high": "#e7ead4",
+            "on-tertiary": "#ffffff",
+            "secondary": "#516600",
+            "info-text": "#5C7300",
+            "on-primary": "#ffffff",
+            "primary-container": "#ccff00",
+            "on-surface-variant": "#444933",
+            "surface-tint": "#506600",
+            "on-secondary-fixed-variant": "#3c4d00",
+            "outline-variant": "#c4c9ac",
+            "on-background": "#1a1d10",
+            "support-strong": "#FF4BB2",
+            "primary-fixed-dim": "#abd600",
+            "outline": "#747a60",
+            "accent-neon": "#CCFF00",
+            "inverse-on-surface": "#f0f3dd",
+            "on-secondary-fixed": "#161e00",
+            "warning-text": "#A75906",
+            "tertiary-container": "#dcefff",
+            "support-pink": "#FF9BD2",
+            "tertiary-fixed": "#d2e5f5",
+            "accent-pressed": "#586E00",
+            "danger-text": "#CE2020",
+            "info-bg": "#ECEFE0",
+            "tertiary": "#4f616e",
+            "success-bg": "#E3F4E9",
+            "border-strong": "#92975F",
+            "on-secondary-container": "#566c00",
+            "surface-bright": "#f9fbe5",
+            "on-primary-fixed": "#161e00",
+            "danger-bg": "#FBE5E5",
+            "on-primary-container": "#5b7300",
+            "on-error": "#ffffff",
+            "surface-alt": "#F1F5E4",
+            "accent-tint": "#F8FFDB",
+            "accent-fill": "#647D00",
+            "background": "#FAFCF4",
+            "border-hairline": "#E2E7D2",
+            "surface": "#FFFFFF",
+            "secondary-fixed": "#d0ef71",
+            "surface-container": "#edf0da",
+            "on-error-container": "#93000a",
+            "error": "#ba1a1a",
+            "surface-variant": "#e2e4cf",
+            "on-surface": "#1a1d10",
+            "on-tertiary-fixed": "#0b1d29",
+            "secondary-fixed-dim": "#b5d258",
+            "tertiary-fixed-dim": "#b6c9d8",
+            "primary-fixed": "#c3f400",
+            "on-tertiary-container": "#5b6d7a",
+            "on-secondary": "#ffffff",
+            "warning-bg": "#FAEFE1",
+            "text-secondary": "#4B5034",
+            "inverse-surface": "#2f3223",
+            "surface-container-highest": "#e2e4cf",
+            "primary": "#506600",
+            "surface-dim": "#d9dcc6",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f3f5df",
+            "text-tertiary": "#6A6F52",
+            "on-tertiary-fixed-variant": "#374956",
+            "inverse-primary": "#abd600"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1.25rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-2xl": "32px",
+            "gutter": "20px",
+            "space-lg": "16px",
+            "space-sm": "8px",
+            "margin": "20px",
+            "space-xs": "4px",
+            "space-xl": "24px",
+            "space-md": "12px"
+          },
+          "fontFamily": {
+            "caption": ["Inter"],
+            "stat-display": ["Inter"],
+            "title": ["Inter"],
+            "display": ["Instrument Serif"],
+            "label": ["Inter"],
+            "body": ["Inter"]
+          },
+          "fontSize": {
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "stat-display": ["32px", { "lineHeight": "38px", "fontWeight": "700" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .custom-card-shadow {
+      box-shadow: 0 1px 2px rgba(28, 31, 12, 0.04), 0 8px 24px rgba(28, 31, 12, 0.06);
+    }
+  </style>
+</head>
+<body class="bg-background text-ink antialiased flex justify-center min-h-screen">
+<!-- Mobile Container (iPhone layout standard 393px width) -->
+<div class="w-full max-w-[393px] min-h-screen flex flex-col relative bg-background pb-32">
+<!-- Top Safe Area Buffer (59px) -->
+<div class="h-[59px] w-full shrink-0"></div>
+<!-- Header Section -->
+<header class="px-5 pb-4 flex items-center justify-between">
+<h1 class="font-display text-display text-ink tracking-tight">Progress</h1>
+<div class="relative w-10 h-10 rounded-full overflow-hidden border border-border-hairline shrink-0">
+<img alt="Alex user profile avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrA7TnAv3uPRkItH0N6ukMX8RyHVY9MqLJYlfWxIoFlnnheUgg-gsDTfFdzR44Ixayuiui_9fkBJun32MgvwHt4fYlnh3mUhQ8HRuLItpud4JJSCai0BEVAw9v5pkI_OedYCt6wmyuYIDpC8WDYwm1CYvL3GTjh3ykrKDPweEkND99pcN3RzaQ0EOFKwG6aVNhSzvrg7-Wv_SjCR7YmsmFop3fNtzN_dYDIJiSD1-BvpWA9B8qWgg7QPh1JItA"/>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="px-5 flex flex-col gap-5">
+<!-- Time Range Filter Chips -->
+<section class="flex items-center gap-2">
+<!-- 4W Unselected -->
+<button class="h-8 px-4 rounded-full bg-accent-tint text-accent-fill font-label text-label flex items-center justify-center transition-all duration-150 active:scale-95">
+          4W
+        </button>
+<!-- 3M Selected -->
+<button class="h-8 px-4 rounded-full bg-ink text-accent-neon font-label text-label font-semibold flex items-center justify-center transition-all duration-150 active:scale-95">
+          3M
+        </button>
+<!-- 6M Unselected -->
+<button class="h-8 px-4 rounded-full bg-accent-tint text-accent-fill font-label text-label flex items-center justify-center transition-all duration-150 active:scale-95">
+          6M
+        </button>
+<!-- 1Y Unselected -->
+<button class="h-8 px-4 rounded-full bg-accent-tint text-accent-fill font-label text-label flex items-center justify-center transition-all duration-150 active:scale-95">
+          1Y
+        </button>
+</section>
+<!-- Focal Card: Weekly Volume -->
+<section class="bg-surface rounded-2xl p-5 border border-border-hairline custom-card-shadow flex flex-col gap-4">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-caption text-caption text-text-tertiary">Weekly volume</span>
+<div class="font-stat-display text-stat-display text-ink tracking-tight font-bold mt-0.5 tabular-nums">
+              24,350 <span class="font-body text-body text-text-secondary font-normal">kg</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 bg-success-bg text-success-text px-2.5 py-1 rounded-full font-caption text-caption font-semibold">
+<span class="material-symbols-outlined text-sm leading-none" data-icon="arrow_upward">arrow_upward</span>
+            +8% vs average
+          </span>
+</div>
+<!-- 12-Bar Weekly Progression Chart -->
+<div class="pt-2">
+<div class="h-32 flex items-end justify-between gap-1.5 px-1 border-b border-border-hairline pb-2">
+<!-- W1 -->
+<div class="flex-1 flex flex-col items-center h-full justify-end">
+<div class="w-full bg-accent-fill rounded-t-sm" style="height: 48%;"></div>
+</div>
+<!-- W2 -->
+<div class="flex-1 flex flex-col items-center h-full justify-end">
+<div class="w-full bg-accent-fill rounded-t-sm" style="height: 54%;"></div>
+</div>
+<!-- W3 -->
+<div class="flex-1 flex flex-col items-center h-full justify-end">
+<div class="w-full bg-accent-fill rounded-t-sm" style="height: 42%;"></div>
+</div>
+<!-- W4 -->
+<div class="flex-1 flex flex-col items-center h-full justify-end">
+<div class="w-full bg-accent-fill rounded-t-sm" style="height: 60%;"></div>
+</div>
+<!-- W5 -->
+<div class="flex-1 flex flex-col items-center h-full justify-end">
+<div class="w-full bg-accent-fill rounded-t-sm" style="height: 68%;"></div>
+</div>
+<!-- W6 -->
+<div class="flex-1 flex flex-col items-center h-full justify-end">
+<div class="w-full bg-accent-fill rounded-t-sm" style="height: 58%;"></div>
+</div>
+<!-- W7 -->
+<div class="flex-1 flex flex-col items-center h-full justify-end">
+<div class="w-full bg-accent-fill rounded-t-sm" style="height: 72%;"></div>
+</div>
+<!-- W8 -->
+<div class="flex-1 flex flex-col items-center h-full justify-end">
+<div class="w-full bg-accent-fill rounded-t-sm" style="height: 65%;"></div>
+</div>
+<!-- W9 -->
+<div class="flex-1 flex flex-col items-center h-full justify-end">
+<div class="w-full bg-accent-fill rounded-t-sm" style="height: 78%;"></div>
+</div>
+<!-- W10 -->
+<div class="flex-1 flex flex-col items-center h-full justify-end">
+<div class="w-full bg-accent-fill rounded-t-sm" style="height: 82%;"></div>
+</div>
+<!-- W11 -->
+<div class="flex-1 flex flex-col items-center h-full justify-end">
+<div class="w-full bg-accent-fill rounded-t-sm" style="height: 75%;"></div>
+</div>
+<!-- W12 (Latest, highlight) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end relative">
+<div class="w-full bg-accent-neon border-2 border-ink rounded-t-sm" style="height: 94%;"></div>
+</div>
+</div>
+<!-- Horizontal axis labels -->
+<div class="flex justify-between items-center pt-2 font-caption text-caption text-text-tertiary px-1 text-[11px]">
+<span>Aug 21</span>
+<span>Sep 18</span>
+<span>Oct 16</span>
+<span class="text-ink font-semibold">This Week</span>
+</div>
+</div>
+</section>
+<!-- Side-by-Side Metric Cards -->
+<section class="grid grid-cols-2 gap-3">
+<!-- Workouts per week -->
+<div class="bg-surface rounded-2xl p-4 border border-border-hairline custom-card-shadow flex flex-col justify-between">
+<div>
+<span class="font-caption text-caption text-text-tertiary">Workouts / week</span>
+<div class="font-stat-display text-stat-display text-ink tracking-tight font-bold mt-1 tabular-nums">
+              3.6 <span class="font-caption text-caption text-text-secondary font-medium">avg</span>
+</div>
+</div>
+<!-- Mini Sparkline in Support Strong Pink (#FF4BB2) -->
+<div class="py-2.5">
+<svg class="w-full h-8 overflow-visible" fill="none" viewbox="0 0 120 32">
+<path d="M2 24 L24 20 L48 26 L72 12 L96 16 L118 6" stroke="#FF4BB2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<circle cx="118" cy="6" fill="#FF4BB2" r="3"></circle>
+</svg>
+</div>
+<div class="font-caption text-caption text-text-secondary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-text-tertiary"></span>
+            Goal: 4 / wk
+          </div>
+</div>
+<!-- Body Weight -->
+<div class="bg-surface rounded-2xl p-4 border border-border-hairline custom-card-shadow flex flex-col justify-between">
+<div>
+<span class="font-caption text-caption text-text-tertiary">Body weight</span>
+<div class="font-stat-display text-stat-display text-ink tracking-tight font-bold mt-1 tabular-nums">
+              78.4 <span class="font-caption text-caption text-text-secondary font-medium">kg</span>
+</div>
+</div>
+<!-- Mini Trend Line in Accent Fill (#647D00) -->
+<div class="py-2.5">
+<svg class="w-full h-8 overflow-visible" fill="none" viewbox="0 0 120 32">
+<path d="M2 6 L26 10 L50 14 L74 18 L98 22 L118 26" stroke="#647D00" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<circle cx="118" cy="26" fill="#647D00" r="3"></circle>
+</svg>
+</div>
+<div class="font-caption text-caption text-success-text font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[15px] leading-none" data-icon="trending_down">trending_down</span>
+            -2.6 kg in 3 months
+          </div>
+</div>
+</section>
+<!-- Personal Records Section Header -->
+<section class="flex items-center justify-between pt-1">
+<h2 class="font-title text-title text-ink font-semibold">Personal records</h2>
+<button class="font-label text-label text-primary font-semibold hover:text-ink transition-colors flex items-center gap-0.5">
+          View all
+          <span class="material-symbols-outlined text-base leading-none" data-icon="chevron_right">chevron_right</span>
+</button>
+</section>
+<!-- Personal Records List Rows -->
+<section class="bg-surface rounded-2xl border border-border-hairline custom-card-shadow overflow-hidden divide-y divide-border-hairline">
+<!-- Record 1: Bench Press -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-bright/50 transition-colors">
+<div class="flex items-center gap-3.5">
+<div class="w-10 h-10 rounded-full bg-accent-tint flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-accent-fill text-xl" data-icon="trophy">trophy</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label text-label text-ink font-semibold">Bench Press</span>
+<span class="bg-accent-tint text-accent-fill font-caption text-[11px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">New PR</span>
+</div>
+<span class="font-caption text-caption text-text-tertiary">Nov 13</span>
+</div>
+</div>
+<div class="font-label text-label text-ink font-semibold tabular-nums text-right">
+            75 kg × 6
+          </div>
+</div>
+<!-- Record 2: Deadlift -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-bright/50 transition-colors">
+<div class="flex items-center gap-3.5">
+<div class="w-10 h-10 rounded-full bg-accent-tint flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-accent-fill text-xl" data-icon="trophy">trophy</span>
+</div>
+<div>
+<span class="font-label text-label text-ink font-semibold">Deadlift</span>
+<div class="font-caption text-caption text-text-tertiary">Nov 4</div>
+</div>
+</div>
+<div class="font-label text-label text-ink font-semibold tabular-nums text-right">
+            140 kg × 3
+          </div>
+</div>
+<!-- Record 3: Squat -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-bright/50 transition-colors">
+<div class="flex items-center gap-3.5">
+<div class="w-10 h-10 rounded-full bg-accent-tint flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-accent-fill text-xl" data-icon="trophy">trophy</span>
+</div>
+<div>
+<span class="font-label text-label text-ink font-semibold">Squat</span>
+<div class="font-caption text-caption text-text-tertiary">Oct 30</div>
+</div>
+</div>
+<div class="font-label text-label text-ink font-semibold tabular-nums text-right">
+            110 kg × 5
+          </div>
+</div>
+<!-- Record 4: 5K Run -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-bright/50 transition-colors">
+<div class="flex items-center gap-3.5">
+<div class="w-10 h-10 rounded-full bg-accent-tint flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-accent-fill text-xl" data-icon="trophy">trophy</span>
+</div>
+<div>
+<span class="font-label text-label text-ink font-semibold">5K Run</span>
+<div class="font-caption text-caption text-text-tertiary">Oct 26</div>
+</div>
+</div>
+<div class="font-label text-label text-ink font-semibold tabular-nums text-right">
+            24:18
+          </div>
+</div>
+</section>
+<!-- Secondary Action Button -->
+<button class="w-full h-14 rounded-full bg-surface border-[1.5px] border-border-strong text-ink font-label text-label font-semibold flex items-center justify-center gap-2 active:scale-98 hover:bg-surface-bright transition-all duration-150">
+<span>View weekly report</span>
+<span class="material-symbols-outlined text-lg leading-none" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</main>
+<!-- Bottom Navigation Bar (Root screen layout, 5 exact tabs, Progress is ACTIVE) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 pt-2 pb-safe bg-surface border-t border-border-hairline">
+<!-- 1. Today (Inactive) -->
+<button class="flex flex-col items-center justify-center text-text-tertiary font-medium active:scale-95 transition-transform duration-150 py-1 flex-1">
+<span class="material-symbols-outlined text-2xl" data-icon="today">today</span>
+<span class="font-caption text-caption mt-0.5">Today</span>
+</button>
+<!-- 2. Workouts (Inactive) -->
+<button class="flex flex-col items-center justify-center text-text-tertiary font-medium active:scale-95 transition-transform duration-150 py-1 flex-1">
+<span class="material-symbols-outlined text-2xl" data-icon="fitness_center">fitness_center</span>
+<span class="font-caption text-caption mt-0.5">Workouts</span>
+</button>
+<!-- 3. Goals (Inactive) -->
+<button class="flex flex-col items-center justify-center text-text-tertiary font-medium active:scale-95 transition-transform duration-150 py-1 flex-1">
+<span class="material-symbols-outlined text-2xl" data-icon="flag">flag</span>
+<span class="font-caption text-caption mt-0.5">Goals</span>
+</button>
+<!-- 4. Progress (ACTIVE: bold, ink text, neon chartreuse pill backdrop behind icon) -->
+<button class="flex flex-col items-center justify-center text-ink font-semibold active:scale-95 transition-transform duration-150 py-1 flex-1">
+<span class="material-symbols-outlined text-2xl bg-accent-neon text-ink rounded-full px-3 py-0.5" data-icon="trending_up">trending_up</span>
+<span class="font-caption text-caption mt-0.5">Progress</span>
+</button>
+<!-- 5. Profile (Inactive) -->
+<button class="flex flex-col items-center justify-center text-text-tertiary font-medium active:scale-95 transition-transform duration-150 py-1 flex-1">
+<span class="material-symbols-outlined text-2xl" data-icon="person">person</span>
+<span class="font-caption text-caption mt-0.5">Profile</span>
+</button>
+</nav>
+<!-- Bottom Safe Area Clearance Spacer (34px) -->
+<div class="h-[34px] w-full shrink-0"></div>
+</div>
+</body></html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=393, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Kinetra - New goal</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-container": "#5b7300",
+            "surface-dim": "#d9dcc6",
+            "primary": "#506600",
+            "on-error-container": "#93000a",
+            "surface-container-low": "#f3f5df",
+            "on-error": "#ffffff",
+            "inverse-on-surface": "#f0f3dd",
+            "surface-alt": "#F1F5E4",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#374956",
+            "on-secondary-container": "#566c00",
+            "outline": "#747a60",
+            "surface-container": "#edf0da",
+            "on-secondary-fixed-variant": "#3c4d00",
+            "on-surface": "#1a1d10",
+            "accent-neon": "#CCFF00",
+            "secondary-container": "#d0ef71",
+            "info-bg": "#ECEFE0",
+            "accent-tint": "#F8FFDB",
+            "error": "#ba1a1a",
+            "danger-text": "#CE2020",
+            "outline-variant": "#c4c9ac",
+            "secondary-fixed": "#d0ef71",
+            "accent-pressed": "#586E00",
+            "background": "#FAFCF4",
+            "tertiary-fixed": "#d2e5f5",
+            "text-tertiary": "#6A6F52",
+            "inverse-primary": "#abd600",
+            "border-hairline": "#E2E7D2",
+            "warning-text": "#A75906",
+            "primary-container": "#ccff00",
+            "secondary": "#516600",
+            "ink": "#1C1F0C",
+            "danger-bg": "#FBE5E5",
+            "on-secondary-fixed": "#161e00",
+            "success-text": "#0E7C3A",
+            "surface-bright": "#f9fbe5",
+            "on-tertiary-container": "#5b6d7a",
+            "on-surface-variant": "#444933",
+            "accent-fill": "#647D00",
+            "on-background": "#1a1d10",
+            "tertiary": "#4f616e",
+            "tertiary-fixed-dim": "#b6c9d8",
+            "surface-tint": "#506600",
+            "on-tertiary": "#ffffff",
+            "tertiary-container": "#dcefff",
+            "primary-fixed": "#c3f400",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed": "#0b1d29",
+            "surface-container-high": "#e7ead4",
+            "primary-fixed-dim": "#abd600",
+            "support-pink": "#FF9BD2",
+            "success-bg": "#E3F4E9",
+            "surface-container-highest": "#e2e4cf",
+            "on-secondary": "#ffffff",
+            "warning-bg": "#FAEFE1",
+            "surface-variant": "#e2e4cf",
+            "on-primary-fixed-variant": "#3c4d00",
+            "border-strong": "#92975F",
+            "error-container": "#ffdad6",
+            "secondary-fixed-dim": "#b5d258",
+            "support-strong": "#FF4BB2",
+            "info-text": "#5C7300",
+            "surface": "#FFFFFF",
+            "on-primary-fixed": "#161e00",
+            "inverse-surface": "#2f3223",
+            "text-secondary": "#4B5034"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "24px",
+            "space-md": "12px",
+            "space-2xl": "32px",
+            "space-sm": "8px",
+            "margin": "20px",
+            "space-xs": "4px",
+            "gutter": "20px",
+            "space-lg": "16px"
+          },
+          "fontFamily": {
+            "stat-display": ["Inter", "sans-serif"],
+            "display": ["Instrument Serif", "serif"],
+            "title": ["Inter", "sans-serif"],
+            "label": ["Inter", "sans-serif"],
+            "caption": ["Inter", "sans-serif"],
+            "body": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "stat-display": ["32px", { "lineHeight": "38px", "fontWeight": "700" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #ECEEE4;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 350, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .ink-card-shadow {
+      box-shadow: 0 4px 20px rgba(28, 31, 12, 0.12), 0 1px 3px rgba(28, 31, 12, 0.08);
+    }
+    .soft-shadow {
+      box-shadow: 0 1px 2px rgba(28, 31, 12, 0.04), 0 8px 24px rgba(28, 31, 12, 0.06);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex justify-center items-start min-h-screen py-0 md:py-8">
+<!-- iPhone Frame Standard Canvas (393px × 852px) -->
+<main class="w-[393px] min-h-[852px] bg-background relative flex flex-col justify-between overflow-x-hidden border-x border-border-hairline shadow-2xl">
+<!-- Top System Safe Area Clearance (59px) -->
+<div class="w-full h-[59px] flex justify-between items-end px-7 pb-2 select-none z-20">
+<span class="font-label text-label font-bold text-ink text-[15px] tracking-tight">9:41</span>
+<div class="flex items-center gap-1.5 text-ink">
+<span class="material-symbols-outlined text-[17px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[17px]">wifi</span>
+<span class="material-symbols-outlined text-[20px]">battery_full</span>
+</div>
+</div>
+<!-- Scrollable Form Container -->
+<div class="flex-1 px-5 pb-28 pt-1">
+<!-- TopAppBar Component (from Shared Components JSON) -->
+<header class="flex justify-between items-center w-full pb-space-md">
+<button aria-label="Back" class="w-10 h-10 -ml-2 rounded-full flex items-center justify-center text-ink active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="font-display text-display text-ink flex-1 text-center -ml-2 select-none">New goal</h1>
+<div class="w-8"></div>
+</header>
+<!-- Main Form Body -->
+<div class="space-y-6 pt-1">
+<!-- 1. Goal Type Selector -->
+<div>
+<label class="block font-label text-label text-ink font-semibold mb-2.5">Goal type</label>
+<div class="grid grid-cols-4 gap-2">
+<!-- 1. Strength (Selected) -->
+<button class="h-[76px] rounded-[14px] bg-ink flex flex-col items-center justify-center gap-1.5 transition-all duration-150 active:scale-95 border border-ink" type="button">
+<span class="material-symbols-outlined text-accent-neon text-[24px]">fitness_center</span>
+<span class="font-caption text-caption text-accent-neon font-medium">Strength</span>
+</button>
+<!-- 2. Distance (Unselected) -->
+<button class="h-[76px] rounded-[14px] bg-surface flex flex-col items-center justify-center gap-1.5 border border-border-hairline hover:bg-surface-container active:scale-95 transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-text-secondary text-[24px]">directions_run</span>
+<span class="font-caption text-caption text-text-secondary font-medium">Distance</span>
+</button>
+<!-- 3. Body weight (Unselected) -->
+<button class="h-[76px] rounded-[14px] bg-surface flex flex-col items-center justify-center gap-1.5 border border-border-hairline hover:bg-surface-container active:scale-95 transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-text-secondary text-[24px]">scale</span>
+<span class="font-caption text-caption text-text-secondary font-medium">Weight</span>
+</button>
+<!-- 4. Consistency (Unselected) -->
+<button class="h-[76px] rounded-[14px] bg-surface flex flex-col items-center justify-center gap-1.5 border border-border-hairline hover:bg-surface-container active:scale-95 transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-text-secondary text-[24px]">local_fire_department</span>
+<span class="font-caption text-caption text-text-secondary font-medium">Habit</span>
+</button>
+</div>
+</div>
+<!-- 2. Form Inputs Cluster -->
+<div class="space-y-4">
+<!-- Field 1: Exercise -->
+<div>
+<label class="block font-label text-label text-ink font-semibold mb-1.5">Exercise</label>
+<div class="relative w-full h-[52px] bg-surface rounded-[12px] border border-border-strong px-4 flex items-center justify-between cursor-pointer focus-within:ring-2 focus-within:ring-accent-fill transition-all">
+<span class="font-body text-body text-ink font-medium">Squat</span>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Fields 2 & 3: Current & Target (Side-by-side) -->
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block font-label text-label text-ink font-semibold mb-1.5">Current</label>
+<div class="relative w-full h-[52px] bg-surface rounded-[12px] border border-border-strong px-4 flex items-center focus-within:ring-2 focus-within:ring-accent-fill transition-all">
+<input class="w-full bg-transparent border-0 p-0 font-body text-body text-ink font-medium focus:ring-0 focus:outline-none" type="text" value="100 kg"/>
+</div>
+</div>
+<div>
+<label class="block font-label text-label text-ink font-semibold mb-1.5">Target</label>
+<div class="relative w-full h-[52px] bg-surface rounded-[12px] border border-border-strong px-4 flex items-center focus-within:ring-2 focus-within:ring-accent-fill transition-all">
+<input class="w-full bg-transparent border-0 p-0 font-body text-body text-ink font-medium focus:ring-0 focus:outline-none" type="text" value="120 kg"/>
+</div>
+</div>
+</div>
+<!-- Field 4: Deadline -->
+<div>
+<label class="block font-label text-label text-ink font-semibold mb-1.5">Deadline</label>
+<div class="relative w-full h-[52px] bg-surface rounded-[12px] border border-border-strong px-4 flex items-center justify-between cursor-pointer focus-within:ring-2 focus-within:ring-accent-fill transition-all">
+<input class="w-full bg-transparent border-0 p-0 font-body text-body text-ink font-medium focus:ring-0 focus:outline-none cursor-pointer" readonly="" type="text" value="Feb 28, 2027"/>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]">calendar_today</span>
+</div>
+</div>
+</div>
+<!-- 3. Focal Hero Preview Card -->
+<div class="bg-ink rounded-[20px] p-5 ink-card-shadow flex flex-col gap-4 text-white relative overflow-hidden">
+<!-- Top subtle badge -->
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-semibold tracking-wider text-border-strong uppercase">Goal Preview</span>
+<span class="w-2 h-2 rounded-full bg-accent-neon animate-pulse"></span>
+</div>
+<!-- Headline -->
+<div>
+<h2 class="font-display text-[24px] leading-tight text-white font-normal">Squat 120 kg by Feb 28</h2>
+</div>
+<!-- Progress Bar & Analytics -->
+<div class="space-y-2 pt-0.5">
+<!-- 8px pill progress track -->
+<div class="w-full h-2 rounded-full bg-white/15 overflow-hidden flex items-center p-0.5">
+<div class="h-full rounded-full bg-accent-neon w-[4px]"></div>
+</div>
+<div class="flex justify-between items-center text-[12px] font-caption text-white/70">
+<span>0% completed</span>
+<span class="font-medium text-[#c4c9ac]">20 kg to go</span>
+</div>
+</div>
+<!-- Accent Stat Highlight -->
+<div class="pt-2 border-t border-white/10 flex items-center gap-1.5 text-accent-neon text-caption font-label font-medium">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+<span>About +1.4 kg per week needed</span>
+</div>
+</div>
+<!-- 4. Toggle Setting Row -->
+<div class="bg-surface rounded-[16px] p-4 border border-border-hairline soft-shadow flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label text-body text-ink font-semibold">Weekly reminder</span>
+<span class="font-caption text-caption text-text-tertiary">Mondays at 8:00 AM</span>
+</div>
+<!-- iOS style toggle switch ON -->
+<button aria-checked="true" class="w-12 h-7 bg-accent-fill rounded-full relative p-0.5 transition-colors duration-200 focus:outline-none" role="switch" type="button">
+<span class="w-6 h-6 bg-surface rounded-full shadow-md transform translate-x-5 block transition-transform duration-200"></span>
+</button>
+</div>
+</div>
+</div>
+<!-- Fixed Bottom Action Dock (NO BOTTOM TAB BAR - Modal Goal Flow) -->
+<div class="sticky bottom-0 w-full px-5 pt-3 pb-space-sm bg-gradient-to-t from-background via-background/95 to-transparent z-30 flex flex-col items-center">
+<!-- Full-width Primary Action Button -->
+<button class="w-full h-[56px] rounded-full bg-accent-neon active:bg-[#B8E600] flex items-center justify-center font-label text-body font-semibold text-ink shadow-sm transition-transform duration-150 active:scale-[0.98]" type="button">
+        Create goal
+      </button>
+<!-- iPhone Home Indicator Safe Area (34px total vertical clearance) -->
+<div class="w-full h-[34px] flex items-center justify-center pt-2">
+<div class="w-[134px] h-[5px] bg-ink/20 rounded-full"></div>
+</div>
+</div>
+</main>
+</body></html>

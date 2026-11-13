@@ -1,0 +1,402 @@
+{
+  "title": "Kinetra",
+  "slug": "kinetra",
+  "domain": "fitness",
+  "style": "bright",
+  "allow3D": false,
+  "features": [
+    "Onboarding with a primary goal pick (build strength, lose weight, run further, stay active) and weekly target",
+    "Today dashboard: weekly activity ring, streak, today's planned workout, quick log",
+    "Workout library with plans and routines (strength, cardio, mobility) and filters",
+    "Workout detail with exercise list, sets x reps, estimated time and Start",
+    "Live exercise logging: log sets, reps and weight per exercise, rest timer, mark set done",
+    "Exercise picker with search and muscle-group filters to add an exercise",
+    "Workout summary after finishing: duration, volume, sets, personal records",
+    "Goal tracking: list of goals with progress bars and deadlines",
+    "Create a goal: type, target value, deadline, weekly reminder",
+    "Progress charts: weekly volume, workouts per week, body weight trend, personal records",
+    "Weekly progress report: summary stats, goal progress, highlights, consistency",
+    "Profile with units, reminders, connected devices (simulated) and data export (simulated)"
+  ],
+  "bannedTerms": [
+    "coach chat",
+    "meal plan",
+    "nutrition",
+    "subscription",
+    "premium",
+    "AI coach",
+    "Apple Health",
+    "Google Fit",
+    "diagnosis"
+  ],
+  "screenCount": 14,
+  "sharedComponents": {
+    "bottomTabBar": {
+      "tabs": [
+        "Today",
+        "Workouts",
+        "Goals",
+        "Progress",
+        "Profile"
+      ],
+      "icons": [
+        "sun",
+        "dumbbell",
+        "target",
+        "bar-chart-2",
+        "user"
+      ],
+      "note": "Flat white bar, 1px top hairline border, no gradient. Active tab: icon + label in text.primary ink with a small neon accent pill (accent #CCFF00) behind the icon; inactive: text.secondary."
+    },
+    "statusBar": "Header on tab screens: screen title on the left in display style (Instrument Serif), round avatar or icon button on the right.",
+    "controls": "Primary button: pill, 56px tall, accent neon #CCFF00 fill with ink #1C1F0C label (pressed accentPressed, disabled 40% opacity). Dark button variant: ink fill with white label. Secondary button: pill, white with 1.5px borderStrong border, ink label. Text input: 12px radius, 52px, white, borderStrong border, focus = 2px accentFill ring, error = danger border + 13px helper. Card: white, 20px radius, soft shadow. Chip: pill, 32px, accentTint fill with accentFill text, 13px; selected chip = ink fill with neon text. Progress bar: 8px pill track surfaceAlt, fill accentFill."
+  },
+  "screens": [
+    {
+      "name": "welcome",
+      "purpose": "First launch: what the app does and a start button",
+      "group": "onboarding",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "content": "Full-bleed real photo hero of a woman in her 30s doing a kettlebell swing in a bright daylight gym, ink gradient at the bottom for text; small logo mark K; headline in Instrument Serif 'Train with intent. See every rep add up.'; subline 'Log workouts, set goals and watch your progress grow'; 3 small proof chips 'Log in 3 taps', 'Goal tracking', 'Weekly reports'; neon primary button 'Get started'; text button 'I already have an account'"
+    },
+    {
+      "name": "goal-setup",
+      "purpose": "Pick a main goal and a weekly target",
+      "group": "onboarding",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "content": "Step indicator 'Step 2 of 3'; title 'What is your main goal?'; 4 large selectable cards in a 2x2 grid each with a real photo thumbnail: 'Build strength' (selected, accent ring + check), 'Lose weight', 'Run further', 'Stay active'; section 'Workouts per week' with a segmented stepper 2 3 4 5 6 where 4 is selected; helper 'You can change this later'; neon primary button 'Continue'"
+    },
+    {
+      "name": "today",
+      "purpose": "See this week at a glance and start today's workout",
+      "group": "core",
+      "nav": "Today",
+      "states": [
+        "default",
+        "empty"
+      ],
+      "content": "Header 'Good morning, Alex' with date 'Thu, Nov 13' and avatar; FOCAL ink card with a big neon activity ring '3 of 4 workouts' this week, next to stats '12 day streak', '186 active min', '24,350 kg lifted'; 7 day strip M T W T F S S with filled neon dots on completed days; card 'Today's plan' with real photo thumbnail of a barbell on a gym floor, 'Upper Body Power', '6 exercises, 45 min', neon button 'Start workout'; section 'Goals' with 2 compact progress rows 'Bench press 80 kg, 72.5 kg, 78%' and 'Run 50 km this month, 31.4 km, 63%'; 'Recent' row 'Leg Day, Tue, 52 min, 8,420 kg'"
+    },
+    {
+      "name": "today-empty",
+      "purpose": "First-run Today screen before any workout is logged",
+      "group": "core",
+      "nav": "Today",
+      "states": [
+        "empty"
+      ],
+      "content": "Header 'Welcome, Alex' with avatar; FOCAL real photo of an empty gym bench with a water bottle and towel in morning light, rounded card; title 'No workouts yet this week'; text 'Log your first session and your ring, streak and reports start here.'; neon primary button 'Log first workout'; secondary button 'Browse plans'; empty ring placeholder '0 of 4 workouts' in a light card"
+    },
+    {
+      "name": "workouts",
+      "purpose": "Browse plans and routines to start or log",
+      "group": "core",
+      "nav": "Workouts",
+      "states": [
+        "default"
+      ],
+      "content": "Title 'Workouts'; search field 'Search workouts or exercises'; filter chips 'All' (selected), 'Strength', 'Cardio', 'Mobility', 'HIIT'; FOCAL featured plan card with real photo of a man doing pull-ups, ink gradient overlay, '4-Week Strength Builder', 'Week 2 of 4', progress bar 45%; section 'My routines' list rows each with real photo thumbnail: 'Upper Body Power, 6 exercises, 45 min', 'Leg Day, 7 exercises, 50 min', 'Core Blast, 5 exercises, 20 min', 'Easy 5K Run, Cardio, 30 min'; floating neon round button with plus for 'New routine'"
+    },
+    {
+      "name": "workout-detail",
+      "purpose": "Review a routine's exercises before starting",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "content": "Real photo header of a barbell bench press, back arrow and more button; title 'Upper Body Power'; meta chips '45 min', '6 exercises', 'Intermediate'; FOCAL stat row 'Last time: 6,820 kg volume, Nov 6'; exercise list with small real photo thumbnails and set info: 'Bench Press 4 x 6, 72.5 kg', 'Pull-up 4 x 8, bodyweight', 'Overhead Press 3 x 8, 40 kg', 'Barbell Row 3 x 10, 60 kg', 'Dumbbell Curl 3 x 12, 14 kg', 'Triceps Dip 3 x 12'; sticky neon button 'Start workout'"
+    },
+    {
+      "name": "active-workout",
+      "purpose": "Log sets, reps and weight live during a workout",
+      "group": "core",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "content": "Top bar with close button, title 'Upper Body Power', elapsed timer '18:42', 'Finish' text button; progress 'Exercise 2 of 6'; FOCAL exercise card 'Pull-up' with real photo of a man doing a pull-up; set table with columns Set, Previous, kg, Reps, done check: row 1 'BW x 8' done neon, row 2 'BW x 8' done, row 3 active with steppers reps 7, row 4 empty; button 'Add set'; ink rest timer bar 'Rest 1:15' with '+15s' and 'Skip'; next up row 'Overhead Press, 3 x 8, 40 kg'"
+    },
+    {
+      "name": "exercise-picker",
+      "purpose": "Search and add an exercise to the workout",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "content": "Sheet header 'Add exercise' with close; search field with text 'press'; muscle-group chips 'All', 'Chest' (selected), 'Back', 'Legs', 'Shoulders', 'Arms', 'Core'; results list with small real photo thumbnails and muscle tag: 'Bench Press, Chest, Barbell' (checked), 'Incline Dumbbell Press, Chest, Dumbbell', 'Overhead Press, Shoulders, Barbell', 'Leg Press, Legs, Machine', 'Push Press, Shoulders, Barbell'; sticky neon button 'Add 1 exercise'"
+    },
+    {
+      "name": "workout-summary",
+      "purpose": "Celebrate and review a finished workout",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "content": "Neon accent band with title 'Workout complete' and 'Upper Body Power, Thu Nov 13'; FOCAL big number '7,140 kg' total volume with '+4.7% vs last time'; stat grid 'Duration 47:12', 'Sets 21', 'Reps 168', 'Calories 410'; card 'New personal record' with trophy icon 'Bench Press 75 kg x 6'; card 'Goal progress' bar 'Bench press 80 kg, 94%'; text area 'How did it feel?' with 5 emoji-free effort chips 'Easy', 'Good', 'Hard'; ink button 'Save workout'"
+    },
+    {
+      "name": "goals",
+      "purpose": "Track every goal and its progress",
+      "group": "core",
+      "nav": "Goals",
+      "states": [
+        "default"
+      ],
+      "content": "Title 'Goals' with plus button; segmented control 'Active (4)' selected, 'Completed (7)'; FOCAL ink hero card 'Bench press 80 kg' with big neon number '94%', '75 of 80 kg', 'Due Dec 31'; goal cards with progress bars and icons: 'Run 50 km in November, 31.4 km, 63%, 17 days left', 'Lose 4 kg, 2.6 kg lost, 65%, Due Jan 15', 'Train 4x per week, 3 of 4 this week, 75%'; small card 'Completed last: Deadlift 120 kg, Oct 28'"
+    },
+    {
+      "name": "new-goal",
+      "purpose": "Create a new goal with target and deadline",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "content": "Header with back arrow 'New goal'; goal type cards row 'Strength' (selected), 'Distance', 'Body weight', 'Consistency'; inputs: exercise 'Squat', current '100 kg', target '120 kg', deadline 'Feb 28, 2027'; FOCAL preview card 'Squat 120 kg by Feb 28' with progress bar 0% and 'About +1.4 kg per week'; toggle row 'Weekly reminder, Mondays 8:00 AM' on; neon primary button 'Create goal'"
+    },
+    {
+      "name": "progress",
+      "purpose": "See trends and personal records",
+      "group": "core",
+      "nav": "Progress",
+      "states": [
+        "default"
+      ],
+      "content": "Title 'Progress'; range chips '4W', '3M' (selected), '6M', '1Y'; FOCAL bar chart card 'Weekly volume' with 12 bars in accentFill, latest bar neon, big number '24,350 kg this week' '+8% vs avg'; card 'Workouts per week' small line chart in support pink-strong; card 'Body weight' line '78.4 kg' '-2.6 kg in 3 months'; section 'Personal records' rows 'Bench Press 75 kg x 6, Nov 13', 'Deadlift 140 kg x 3, Nov 4', 'Squat 110 kg x 5, Oct 30', '5K Run 24:18, Oct 26'; button 'View weekly report'"
+    },
+    {
+      "name": "weekly-report",
+      "purpose": "Read a weekly progress report",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "content": "Header with back arrow 'Weekly report' and share icon; date range 'Nov 3 - Nov 9'; FOCAL ink card with big neon grade 'Strong week' and '4 of 4 workouts done'; stats grid 'Workouts 4', 'Active time 3h 12m', 'Volume 23,980 kg', 'Distance 14.2 km'; consistency strip 7 days with dots; section 'Goals this week' 3 progress rows with change '+6%', '+11%', '+3%'; section 'Highlights' list 'New PR: Deadlift 140 kg', 'Longest run: 8.1 km', 'Best streak: 12 days'; section 'Next week' tip text 'Add one mobility session to recover between leg days'"
+    },
+    {
+      "name": "profile",
+      "purpose": "Manage profile and preferences",
+      "group": "settings",
+      "nav": "Profile",
+      "states": [
+        "default"
+      ],
+      "content": "Real photo avatar of Alex Morgan, athletic man in his early 30s, gym hoodie; name 'Alex Morgan', 'Member since Mar 2025'; FOCAL stat row 'Workouts 148', 'PRs 23', 'Streak 12'; settings list with icons: 'Units, kg and km', 'Workout reminders, Mon Wed Fri 7:00 AM', 'Weekly report, Sunday evening', 'Connected devices, Heart rate strap', 'Export data, CSV', 'Help and feedback'; text button 'Sign out'"
+    }
+  ],
+  "designSystem": {
+    "variant": "P18",
+    "variantName": "neon chartreuse",
+    "theme": "light",
+    "frame": "393x852 mobile (iPhone 16/17), top inset 59px, bottom inset 34px",
+    "color": {
+      "background": "#FAFCF4",
+      "surface": "#FFFFFF",
+      "surfaceAlt": "#F1F5E4",
+      "accent": "#CCFF00",
+      "accentFill": "#647D00",
+      "accentTint": "#F8FFDB",
+      "accentPressed": "#586E00",
+      "support": "#FF9BD2",
+      "text": {
+        "primary": "#1C1F0C",
+        "secondary": "#4B5034",
+        "tertiary": "#6A6F52"
+      },
+      "border": "#E2E7D2",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "gradient": [
+        "#647D00",
+        "#586E00"
+      ],
+      "statusOn": {
+        "warning": {
+          "fg": "#A75906",
+          "tint": "#FAEFE1"
+        },
+        "success": {
+          "fg": "#0E7C3A",
+          "tint": "#E3F4E9"
+        },
+        "danger": {
+          "fg": "#CE2020",
+          "tint": "#FBE5E5"
+        },
+        "info": {
+          "fg": "#5C7300",
+          "tint": "#ECEFE0"
+        }
+      },
+      "supportStrong": "#FF4BB2",
+      "borderStrong": "#92975F"
+    },
+    "type": {
+      "fontFamily": "Inter",
+      "displayFamily": "Instrument Serif",
+      "numeralFamily": "Inter (tabular)",
+      "display": "32 / 400 Instrument Serif / -0.01em",
+      "title": "20 / 600",
+      "body": "16 / 400",
+      "label": "14 / 500",
+      "caption": "13 / 500",
+      "minSize": "12px (13px chips and tags, 14px safety or legal text)",
+      "scaleRule": "Use only the 5 declared sizes (display, title, body, label, caption)."
+    },
+    "radius": {
+      "card": 20,
+      "control": 14,
+      "input": 12,
+      "pill": 999
+    },
+    "spacing": "8pt scale (4, 8, 12, 16, 24, 32); screen edge padding 20px",
+    "elevation": "card = 0 1px 2px rgba(28,31,12,.04) + 0 8px 24px rgba(28,31,12,.06)",
+    "icons": "Lucide-style rounded outline, 24px, 1.75 stroke",
+    "a11y": "neon accent carries ink labels only; white labels on accentFill or ink only; text on gradients >= 4.5:1; tap targets >= 44pt"
+  },
+  "tokenCheck": {
+    "results": [
+      {
+        "pair": "text.primary on background",
+        "ratio": 16.23,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.primary on surface",
+        "ratio": 16.79,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.secondary on background",
+        "ratio": 8.13,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.secondary on surface",
+        "ratio": 8.41,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.tertiary on background",
+        "ratio": 5.06,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.tertiary on surface",
+        "ratio": 5.24,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "white label on accentFill (buttons)",
+        "ratio": 4.69,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "accentFill text on accentTint (chips, selected)",
+        "ratio": 4.54,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "accentFill as link text on background",
+        "ratio": 4.53,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "white on hero gradient (both stops)",
+        "ratio": 4.69,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "warning text on its tint and on surface",
+        "ratio": 2.81,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#A75906",
+        "after": 4.54
+      },
+      {
+        "pair": "success text on its tint and on surface",
+        "ratio": 2.89,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#0E7C3A",
+        "after": 4.64
+      },
+      {
+        "pair": "danger text on its tint and on surface",
+        "ratio": 4.01,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#CE2020",
+        "after": 4.53
+      },
+      {
+        "pair": "info text on its tint and on surface",
+        "ratio": 4.02,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#5C7300",
+        "after": 4.6
+      },
+      {
+        "pair": "support as chart line / icon on surface (non-text 3:1)",
+        "ratio": 1.93,
+        "target": 3.0,
+        "pass": false,
+        "fixedTo": "#FF4BB2",
+        "after": 3.04
+      },
+      {
+        "pair": "input / control border on surface (non-text 3:1)",
+        "ratio": 1.27,
+        "target": 3.0,
+        "pass": false,
+        "fixedTo": "#92975F",
+        "after": 3.08
+      }
+    ],
+    "changed": {},
+    "passed": true
+  }
+}
