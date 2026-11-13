@@ -176,8 +176,8 @@ class ProgressBar extends StatelessWidget {
       );
 }
 
-class Thumb extends StatelessWidget {
-  const Thumb(this.asset, {super.key, this.size = 52, this.radius = 12});
+class PhotoThumb extends StatelessWidget {
+  const PhotoThumb(this.asset, {super.key, this.size = 52, this.radius = 12});
 
   final String asset;
   final double size;
