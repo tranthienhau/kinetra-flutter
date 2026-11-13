@@ -194,3 +194,34 @@ class WeekDots extends StatelessWidget {
     );
   }
 }
+
+/// Small bar strip for counts (workouts per week), where a line would read as noise.
+class MiniBars extends StatelessWidget {
+  const MiniBars({super.key, required this.values, required this.color, this.height = 48});
+
+  final List<double> values;
+  final Color color;
+  final double height;
+
+  @override
+  Widget build(BuildContext context) {
+    final maxV = values.isEmpty ? 1.0 : values.reduce(math.max).clamp(1, double.infinity);
+    return SizedBox(
+      height: height,
+      child: Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
+        for (var i = 0; i < values.length; i++) ...[
+          if (i > 0) const SizedBox(width: 3),
+          Expanded(
+            child: Container(
+              height: math.max(3, height * values[i] / maxV),
+              decoration: BoxDecoration(
+                color: i == values.length - 1 ? color : color.withValues(alpha: .45),
+                borderRadius: BorderRadius.circular(3),
+              ),
+            ),
+          ),
+        ],
+      ]),
+    );
+  }
+}

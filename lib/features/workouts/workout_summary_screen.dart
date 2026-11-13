@@ -106,7 +106,7 @@ class _WorkoutSummaryScreenState extends ConsumerState<WorkoutSummaryScreen> {
                     _Tile('Duration', fmtDuration(s.duration), Icons.timer_outlined),
                     _Tile('Sets', '${s.setCount}', Icons.layers_outlined),
                     _Tile('Reps', '${s.repCount}', Icons.repeat_rounded),
-                    _Tile('Calories', '${s.calories}', Icons.local_fire_department_outlined, unit: 'kcal'),
+                    _Tile('Calories (est.)', '${s.calories}', Icons.local_fire_department_outlined, unit: 'kcal'),
                   ],
                 ),
                 for (final r in records) ...[

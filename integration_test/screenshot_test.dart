@@ -35,6 +35,8 @@ void main() {
     await tapKey(t, 'set-check-1', settleMs: 300);
     await tapKey(t, 'set-check-2', settleMs: 300);
     await tapKey(t, 'set-check-3', settleMs: 300);
+    // Stills are taken at the top of the screen: scroll the set table back down out of view.
+    await t.drag(find.byKey(const Key('active-list')), const Offset(0, 1500));
     await shot('06-active-workout');
     await tapKey(t, 'add-exercise');
     await tapKey(t, 'muscle-chest', settleMs: 500);

@@ -79,7 +79,7 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen> {
                   const SizedBox(height: 4),
                   Text(avgCount.toStringAsFixed(1), style: K.stat.copyWith(fontSize: 26)),
                   const SizedBox(height: 8),
-                  Sparkline(values: [for (final c in counts) c.toDouble()], color: K.pinkStrong),
+                  MiniBars(values: [for (final c in counts) c.toDouble()], color: K.pinkStrong),
                   const SizedBox(height: 6),
                   Text('Goal: ${ref.watch(profileProvider).perWeek} / wk', style: K.caption.copyWith(fontSize: 12)),
                 ]),
